@@ -1,0 +1,42 @@
+var courses = [
+    {
+        name: "Intro To Web Development.",
+        image: "/assets/img/webdevelopment.jpg",
+        description: "",
+        prerequsite: "programing fundamentals.",
+        whatsappMessage: "Hi I Want To Enroll In Programing Fundamentals.",
+        duration: "Three(3) Months",
+        price: "RS. 21,000/Month",
+        programoutline: "84 Lectures, 10 Assignments, 1 Project, 3Quizzes, Mid-term Evalution, Final Evalution.",
+    },
+    {
+        name: "Frontend Engineering.",
+        image: "/assets/img/newfront.jpeg",
+        description: "",
+        whatsappMessage: "Hi Im Here For Enroll In Intro To Web Development.",
+        duration: "Six(6) Months",
+        prerequsite: "intro to web development.",
+        price: "RS. 21,000/Month",
+        programoutline: "84 Lectures, 10 Assignments, 1 Project, 3Quizzes, Mid-term Evalution, Final Evalution.",
+    },
+    {
+        name: "Backend Engineering.",
+        image: "/assets/img/newbackend.jpeg",
+        description: "",
+        whatsappMessage: "Hi Im Here For Enroll In Intro To Web Development.",
+        duration: "Six(6) Months",
+        prerequsite: "intro to web development.",
+        price: "RS. 21,000/Month",
+        programoutline: "84 Lectures, 10 Assignments, 1 Project, 3Quizzes, Mid-term Evalution, Final Evalution.",
+    },
+    {
+        name: "Programing Fundamentals.",
+        image: "/assets//img/newimagebasic.jpeg",
+        description: "",
+        whatsappMessage: "Hi Im Here For Enroll In Admission Interview .",
+        duration: "Three(3) Months",
+        prerequsite: "Admission Interview.",
+        price: "RS. 21,000/Month",
+        programoutline: "42 Lectures, 10 Assignments, 1 Project, 3Quizzes, Mid-term Evalution, Final Evalution.",
+    }
+];

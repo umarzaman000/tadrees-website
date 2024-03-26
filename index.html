@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <head>
+    <meta charset="UTF-8" />
+    <title>tadrees</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tadrees- Website" />
+    <meta name="author" content="merkulove" />
+    <meta name="keywords" content="" />
+    <link rel="icon" href="./assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="main-section">
+        <header>
+          <div class="container">
+            <div class="header-content d-flex flex-wrap align-items-center">
+              <div class="logo">
+                <a href="index.html" title="">
+                  <img class="websitelogo" src="assets/img/logo.png" alt="" />
+                </a>
+              </div>
+              <!--logo end-->
+              <ul class="contact-add d-flex flex-wrap">
+                <li>
+                  <div 
+                     style="cursor: pointer;"
+                      href="javascript:void(0);"
+                      onclick="sendMessage3();"
+                  class="contact-info">
+                    <i
+                      class="fa fa-phone"
+                      style="
+                        font-size: 20px;
+                        vertical-align: top;
+                        position: relative;
+                        top: 6px;
+                        right: -3px;
+                        color: #1468ce;
+                        transform: rotate(0deg);
+                      "
+                    ></i>
+                    <div class="contact-tt">
+                      <h4>Call</h4>
+                      <span>+92 331 4488908</span>
+                    </div>
+                  </div>
+                  <!--contact-info end-->
+                </li>
+                <li>
+                  <div class="contact-info">
+                    <i
+                      class="fa fa-clock-o"
+                      style="
+                        font-size: 20px;
+                        vertical-align: top;
+                        color: #1468ce;
+                        position: relative;
+                        top: 6px;
+                        right: -3px;
+                      "
+                    ></i>
+                    <div class="contact-tt">
+                      <h4>Work Time</h4>
+                      <span>Mon - Fri 8 AM - 5 PM</span>
+                    </div>
+                  </div>
+                  <!--contact-info end-->
+                </li>
+                <li>
+                  <div class="contact-info">
+                    <i
+                      class="fas fa-map-marker-alt"
+                      style="
+                        font-size: 20px;
+                        position: relative;
+                        vertical-align: top;
+                        top: 6px;
+                        right: -3px;
+                        color: #1468ce;
+                      "
+                    ></i>
+                    <div class="contact-tt">
+                      <h4>Address</h4>
+                      <span>Raiwind Road, Lahore</span>
+                    </div>
+                  </div>
+                  <!--contact-info end-->
+                </li>
+              </ul>
+              <!--contact-information end-->
+              <div class="menu-btn">
+                <a href="#">
+                  <span class="bar1"></span>
+                  <span class="bar2"></span>
+                  <span class="bar3"></span>
+                </a>
+              </div>
+              <!--menu-btn end-->
+            </div>
+            <!--header-content end-->
+            <div class="navigation-bar d-flex flex-wrap align-items-center">
+              <nav>
+                <ul>
+                  <li><a class="active" href="index.html" title="">Home</a></li>
+                  <li>
+                    <a href="about.html" title="">About</a>
+                    </li>
+                  <li>
+                    <a href="classes.html" title="">Classes</a>
+                    
+                  </li>
+                  <li>
+                    <a href="teachers.html" title="">Teachers</a>
+                    
+                  </li>
+                </ul>
+              </nav>
+              <!--nav end-->
+              <ul class="social-links ml-auto">
+                <li>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61557367610427"
+                    title=""
+                    target="_blank"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/tadreespk/"
+                    title=""
+                    target="_blank"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/tadreespk?igsh=MXRibHY2NTd5bTJ4MA%3D%3D&utm_source=qr"
+                    title=""
+                    target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <!--navigation-bar end-->
+          </div>
+        </header>
+        <!--header end-->
+
+        <div class="responsive-menu">
+          <ul>
+            <li><a href="index.html" title="">Home</a></li>
+            <li><a href="about.html" title="">About</a></li>
+            <li><a href="events.html" title="">Events</a></li>
+            <li><a href="event-single.html" title="">Event Single</a></li>
+            <li><a href="schedule.html" title="">Schedule</a></li>
+            <li><a href="classes.html" title="">Classes</a></li>
+            <li><a href="class-single.html" title="">Classe Single</a></li>
+            <li><a href="teachers.html" title="">Teachers</a></li>
+            <li><a href="teacher-single.html" title="">Teacher Single</a></li>
+            <li><a href="error.html" title="">404</a></li>
+          </ul>
+        </div>
+        <!--responsive-menu end-->
+    <section class="main-banner">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-7 col-md-7">
+                <div
+                  class="banner-text wow fadeInLeft"
+                  data-wow-duration="1000ms"
+                >
+                  <h2>Learn Smarter not <br /><span> Harder</span></h2>
+                  <p>
+                    At Tadrees, we’re dedicated to empowering individuals with
+                    the skills they need to thrive in the tech industry. From
+                    programming fundamentals to advanced web development, our
+                    industry-tailored courses set you on the path to success.
+                    Join us and unlock your potential in today’s digital world.
+                  </p>
+                  <div
+                    class="elements-bg-outline wow zoomIn"
+                    data-wow-duration="1000ms"
+                  >
+                    <div
+                      style="
+                        background-color: white;
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50px;
+                        margin-top: 5px;
+                        margin-left: 5px;
+                      "
+                    ></div>
+                  </div>
+                  <div
+                    class="elements-bg-full wow zoomIn"
+                    data-wow-duration="1000ms"
+                  ></div>
+                </div>
+              </div>
+              <div class="col-lg-5 col-md-5">
+                <div class="banner-img wow zoomIn" data-wow-duration="1000ms">
+                  <img
+                    class="banner-img1"
+                    src="assets/img/Frame 3.png"
+                    alt=""
+                  />
+                </div>
+                <!-- banner-img end -->
+                <div
+                  class="elements-bg1 wow zoomIn"
+                  data-wow-duration="1000ms"
+                ></div>
+                <div
+                  class="elements-bg2 wow zoomIn"
+                  data-wow-duration="1000ms"
+                ></div>
+                <div
+                  class="elements-bg3 wow zoomIn"
+                  data-wow-duration="1000ms"
+                ></div>
+                <div
+                  class="elements-bg4 wow zoomIn"
+                  data-wow-duration="1000ms"
+                ></div>
+              </div>
+
+              <!-- <div class="elements-bg4 wow zoomIn" data-wow-duration="1000ms"/> -->
+            </div>
+          </div>
+        </section>
+        <!--main-banner end-->
+
+        <h2 class="main-title">Tadrees</h2>
+      </div>
+      <!--main-section end-->
+
+      <section class="about-us-section">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2><span>Tadrees:</span> Elevating Excellence</h2>
+            <p>
+              Embark on a journey through unparalleled excellence. Our paramount
+              propositions, crafted by Tadrees, transcend conventional
+              standards, embodying a commitment to unparalleled quality,
+              service, and innovation. Discover why we stand at the forefront of
+              distinction.
+            </p>
+          </div>
+          <!--section-title end-->
+          <div class="about-sec">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div class="abt-col wow fadeInUp" data-wow-duration="1000ms">
+                    <i class="fas fa-user-tie fa-gradient-green"></i>
+                    <h3>
+                      Industry Vetted<br />
+                      Faculty
+                    </h3>
+                    <p>Vivamus interdum, mauris interdum quis curdum sodales</p>
+                  </div>
+                  <!--abt-col end-->
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div
+                    class="abt-col wow fadeInUp"
+                    data-wow-duration="1000ms"
+                    data-wow-delay="200ms"
+                  >
+                    <i class="fas fa-book-reader fa-gradient-blue"></i>
+                    <h3>
+                      Learn From<br />
+                      Anywhere
+                    </h3>
+                    <p>
+                      Pelleneget tespharetra que fringilla egugue id eget
+                      pharetra
+                    </p>
+                  </div>
+                  <!--abt-col end-->
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div
+                    class="abt-col wow fadeInUp"
+                    data-wow-duration="1000ms"
+                    data-wow-delay="400ms"
+                  >
+                    <i class="fas fa-bullseye fa-gradient-green"></i>
+                    <h3>
+                      Market Driven<br />
+                      Curriculum
+                    </h3>
+                    <p>
+                      Etiam risus neque, volutpat vel laoreet a, finibus
+                      volutpat non
+                    </p>
+                  </div>
+                  <!--abt-col end-->
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                  <div
+                    class="abt-col wow fadeInUp"
+                    data-wow-duration="1000ms"
+                    data-wow-delay="600ms"
+                  >
+                    <i class="fas fa-desktop fa-gradient-blue"></i>
+                    <h3>
+                      Interactive Learning<br />
+                      Platform
+                    </h3>
+                    <p>
+                      Mauris nec mi fequis ugiat, cursus tortor nec, pharetra
+                      tellus
+                    </p>
+                  </div>
+                  <!--abt-col end-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--about-rw end-->
+          <div class="abt-img">
+            <div class="elements-bg-circleimg" data-wow-duration="1000ms"></div>
+            <div
+              class="elements-bg-circleimg1"
+              data-wow-duration="1000ms"
+            ></div>
+            <div
+              class="elements-bg-circleimg2"
+              data-wow-duration="1000ms"
+            ></div>
+            <ul class="masonary">
+              <li class="width1 wow zoomIn" data-wow-duration="1000ms">
+                <a
+                  href="https://via.placeholder.com/1414x943"
+                  data-group="set1"
+                  title=""
+                  class="html5lightbox"
+                  ><img src="/assets/img/circleimages1.png" alt=""
+                /></a>
+              </li>
+              <li class="width2 wow zoomIn" data-wow-duration="1000ms">
+                <a
+                  href="https://via.placeholder.com/1440x961"
+                  data-group="set1"
+                  title=""
+                  class="html5lightbox"
+                  ><img
+                    src="/assets/img/MB29PHd9nF_1080p_1691443966-ezgif.com-video-to-gif-converter.gif"
+                    alt=""
+                /></a>
+              </li>
+              <li class="width3 wow zoomIn" data-wow-duration="1000ms">
+                <a
+                  href="https://via.placeholder.com/2064x1376"
+                  data-group="set1"
+                  title=""
+                  class="html5lightbox"
+                  ><img src="assets/img/gather1.jpg" alt=""
+                /></a>
+              </li>
+              <li class="width4 wow zoomIn" data-wow-duration="1000ms">
+                <a
+                  href="https://via.placeholder.com/1504x1004"
+                  data-group="set1"
+                  title=""
+                  class="html5lightbox"
+                  ><img src="assets/img/valueprop4.png" alt=""
+                /></a>
+              </li>
+              <li class="width5 wow zoomIn" data-wow-duration="1000ms">
+                <a
+                  href="/assets/img/programingfunda.png"
+                  data-group="set1"
+                  title=""
+                  class="html5lightbox"
+                >
+                  <img
+                    style="object-fit: inherit"
+                    src="assets/img/h3yy6rTnJQ_720p_1691443174-ezgif.com-video-to-gif-converter.gif"
+                    alt=""
+                /></a>
+              </li>
+              <li class="width6 wow zoomIn" data-wow-duration="1000ms">
+                <a
+                  href="https://via.placeholder.com/1393x929"
+                  data-group="set1"
+                  title=""
+                  class="html5lightbox"
+                  ><img src="/assets/img/gather10.png" alt=""
+                /></a>
+              </li>
+              <li class="width7 wow zoomIn" data-wow-duration="1000ms">
+                <a
+                  href="https://via.placeholder.com/1840x1228"
+                  data-group="set1"
+                  title=""
+                  class="html5lightbox"
+                  ><img src="/assets/img/gather9.jpg" alt=""
+                /></a>
+              </li>
+              <li class="width8 wow zoomIn" data-wow-duration="1000ms">
+                <a
+                  href="https://via.placeholder.com/1404x936"
+                  data-group="set1"
+                  title=""
+                  class="html5lightbox"
+                  ><img src="/assets/img/valueprop2.png" alt=""
+                /></a>
+              </li>
+              <li class="width9 wow zoomIn" data-wow-duration="1000ms">
+                <a
+                  href="https://via.placeholder.com/750x502"
+                  data-group="set1"
+                  title=""
+                  class="html5lightbox"
+                  ><img src="assets/img/gather3.avif" alt=""
+                /></a>
+              </li>
+              <li class="width10 wow zoomIn" data-wow-duration="1000ms">
+                <a
+                  href="https://via.placeholder.com/1500x1000"
+                  data-group="set1"
+                  title=""
+                  class="html5lightbox"
+                  ><img src="assets/img/valueprop1.png" alt=""
+                /></a>
+              </li>
+            </ul>
+          </div>
+          <!-- abt-img end-->
+        </div>
+      </section>
+      <section class="classes-section">
+        <div class="container">
+          <div class="sec-title">
+            <ul>
+              <li class="elements-bg-circleimg9"></li>
+              <li class="elements-bg-circleimg10"></li>
+            </ul>
+            <h2>Our Classes</h2>
+            <p>
+              Nam mattis felis id sodales rutrum. Nulla ornare tristique mauris,
+              a laoreet erat ornare sit amet. Nulla sagittis faucibus lacus
+            </p>
+          </div>
+          <!--sec-title end-->
+          <div class="classes-sec">
+            <div id="coursesList" class="row classes-carousel"></div>
+          </div>
+          <div class="lnk-dv text-center">
+            <a href="classes.html" title="" class="btn-default"
+              >Classes <i class="fa fa-long-arrow-alt-right"></i
+            ></a>
+          </div>
+        </div>
+        <!--classes-sec end-->
+      </section>
+      <!--classes-section end-->
+      <script src="courses.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var coursesList = document.getElementById("coursesList");
+        var coursesHTML = courses.map(function (course, index) {
+            return `
+            <div data-index=${index} class="col-lg-3 coursetag-div" style="overflow:hidden; cursor:pointer;">
+                <div class="classes-col wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="200ms">
+                    <div class="class-thumb" >
+                        <img style="height:180px;width:100%" src="${course.image}"/>
+                        <a href="javascript:void(0);" class="crt-btn" >
+                            <i class="fa fa-phone" style="font-size: 20px; position: relative; color: white; transform: rotate(0deg);"></i>
+                        </a>
+                    </div>
+                    <div class="class-info">
+                        <h3>
+                            <div style="cursor:pointer" class="coursetag">${course.name}</div>
+                        </h3>
+                        <p><span style="font-weight: bold; font-size: 15px">Pre Requisite:</span>
+                        ${course.prerequsite}</p>
+                        <p><span style="font-weight: bold; font-size: 15px">Duration:</span>
+                         ${course.duration}</p>
+                        <div class="d-flex flex-wrap align-items-center">
+                            <p style="color: #575757; font-size: 14px; font-weight: 400;">
+                                <span style="font-size: 14px; color: #575757; font-weight: bold;">Program Outline: </span>${course.programoutline}
+                            </p>
+                            <br />
+                            <span class="price">${course.price}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+        }).join("");
+
+        // Set the generated HTML as innerHTML of the coursesList div
+        coursesList.innerHTML = coursesHTML;
+
+        // Add event listeners to courseDivs
+        var courseDivs = document.querySelectorAll(".coursetag-div");
+        courseDivs.forEach(function (div) {
+            div.addEventListener("click", function () {
+                var index = div.getAttribute("data-index");
+                window.location.href = `class-single.html?id=${parseInt(index) + 1}`;
+            });
+        });
+
+        // Function to open WhatsApp and stop event propagation
+        function sendMessage3(event, course) {
+            event.stopPropagation();
+            var prefilledText = course.whatsappMessage;
+            var phoneNumber = "923314488908"; // Update with the target phone number
+            var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(prefilledText);
+            window.open(whatsappLink, "_blank");
+        }
+
+        // Add event listener to each class-thumb
+        var classThumbs = document.querySelectorAll(".crt-btn");
+        classThumbs.forEach(function (thumb, index) {
+            thumb.addEventListener("click", function (event) {
+                sendMessage3(event, courses[index]);
+            });
+        });
+    });
+</script>
+
+
+
+    <section class="teachers-section">
+        <div class="container">
+          <div class="section-title text-center">
+            <h2>
+              Our <span>Awesome</span><br />
+              Teachers
+            </h2>
+            <p>
+              Quisque id ultrices tellus, ac sodales ex. Cras nec ante viverra,
+              bibendum justo eget, lacinia dui. Donec ligula ligula, elementum
+              sit amet
+            </p>
+          </div>
+          <div class="classes-sec">
+         <div id="teacherList" class="row classes-carousel"></div>
+          <!--section-title end-->
+          <script src="teacher.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var teacherList = document.getElementById("teacherList");
+          var teacherHTML = teacher.map(function (teacher,index) {
+            
+            return `
+               <div>
+                <div class="row">
+                  <div style="cursor:pointer" class="col-lg-6 teacher-div" data-index="${index}">
+                    <div
+                  class="classes-col wow fadeInUp"
+                  data-wow-duration="1000ms"
+                >
+                  <div class="teacher-img">
+                    <img style="object-fit: cover;"
+                      src="${teacher.image}"
+                      alt=""
+                      class="w-100"
+                    />
+                    <div class="sc-div">
+                      <ul>
+                        <li>
+                          <a
+                            href="${teacher.linkedin}"
+                            target="_blank"
+                            title=""
+                            ><i class="fab fa-linkedin-in"></i
+                          ></a>
+                        </li>
+                      </ul>
+                      <span><img src="assets/img/plus.png" alt="" /></span>
+                    </div>
+                  </div>
+                  <div class="teacher-info">
+                    <h3 class="teachers">${teacher.name}</h3>
+                      <span>${teacher.designation}</span>
+                    
+                    
+                  </div>
+                </div>
+                    <!--teacher end-->
+                  </div>
+                </div>
+              </div>
+              <!--teachers end-->
+            </div>
+          </div>
+        </div>
+  
+                    
+                `;
+          });
+  
+                  // Join the array of HTML strings and set it as innerHTML of the coursesList div
+               teacherList.innerHTML = teacherHTML.join("");
+                var teacherDivs = document.querySelectorAll(".teacher-div");
+                  teacherDivs.forEach(function(div) {
+                  div.addEventListener("click", function() {
+                    var index = div.getAttribute("data-index");
+                      console.log("data-index-->",index,`teacher-single.html?id=${parseInt(index) + 1}`)
+                      window.location.href = `teacher-single.html?id=${parseInt(index) + 1}`;
+                  });
+              });
+          
+        });
+      </script>
+   <section class="course-section">
+    <div class="container">
+      <div class="sec-title">
+        <h2><span>Testimonial</span></h2>
+        <p>
+          ullam fringilla ipsum sed enim scelerisque, ac porttitor libero
+          egestas. Donec iaculis nisi eget bibendum efficitur. Lorem ipsum
+          dolor sit
+        </p>
+      </div>
+      <div class="classes-sec">
+        <div id="testimoniallist" class="row classes-row-carousel"></div>
+        <script src="testimonial.js"></script>
+        <script>
+          document.addEventListener("DOMContentLoaded", function() {
+            var testimoniallist = document.getElementById("testimoniallist");
+            var testimonialhtml = testimonial.map(function(testimonial, index) {
+              var coursesHtml = testimonial.courses.map(function(course, index) {
+                var lineBreak = index % 2 === 0 && index !== 0 ? '</ul>' : '';
+                var ulOpeningTag = index % 2 === 0 ? '<ul class="uld">' : '';
+                var ulClosingTag = index % 2 === 1 ? '</ul>' : '';
+                return `${lineBreak}${ulOpeningTag}
+                  <li class="category">
+                    <i class="${course.icon}" style="color: #1468ce; margin-right: 5px;"></i>
+                    ${course.name}
+                  </li>
+                  ${ulClosingTag}`;
+              }).join("");
+  
+              // Add a closing tag for the last ul if the number of courses is odd
+              if (testimonial.courses.length % 2 !== 0) {
+                coursesHtml += '</ul>';
+              }
+  
+              return `
+                <div data-index="${index}" style="cursor:pointer" class="course-card">
+                  <div class="d-flex flex-wrap align-items-center">
+                    <ul class="course-meta">
+                      <li style="font-weight: bold">
+                        <i class="fa fa-graduation-cap" style="font-size: 15px; position: relative; color: #1468ce; padding-right: 5px;"></i>Course Studied.
+                      </li>
+                    </ul>
+                    <span>
+                      <img style="width: 100px" src="/assets//img/logo.png" alt="">
+                    </span>
+                  </div>
+                  <div style="min-height: 60px">
+                    ${coursesHtml}
+                  </div>
+                  <div style="display: flex; margin-top: 15px;" class="d-flex flex-wrap">
+                    <div class="posted-by">
+                      <img class="Testimonial" src="${testimonial.image}" alt="">
+                      <a style="font-weight: bold" href="${testimonial.linkedin}" target="_blank" title="">${testimonial.name}</a>
+                    </div>
+                    <span class="locat" style="font-weight: bold">
+                      <i class="fas fa-laptop" style="font-size: 15px; position: relative; color: #1468ce; padding-right: 5px;"></i>${testimonial.Designation}
+                    </span>
+                  </div>
+                </div>
+              `;
+            }).join("");
+            
+            testimoniallist.innerHTML = testimonialhtml;
+  
+            var testimonialDIVS = document.querySelectorAll(".course-card");
+            testimonialDIVS.forEach(function(div) {
+              div.addEventListener("click", function() {
+                var index = div.getAttribute("data-index");
+                console.log("data-index-->", index, `events.html?id=${parseInt(index) + 1}`);
+                window.location.href = `event-single.html?id=${parseInt(index) + 1}`;
+              });
+            });
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+  
+<section class="newsletter-section">
+  <div class="container">
+    <div class="newsletter-sec">
+      <div class="row align-items-center">
+        <div class="col-lg-4">
+          <div class="newsz-ltr-text">
+            <h2>Join us <br />and stay tuned!</h2>
+            <!-- Set an ID for the button to attach event listener -->
+            <button id="joinUsButton" class="btn-default">Join Us <i class="fa fa-long-arrow-alt-right"></i></button>
+          </div><!--newsz-ltr-text end-->
+        </div>
+        <div class="col-lg-8">
+          <form id="newsletterForm" class="newsletter-form">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="text" name="name" id="name" placeholder="Name" />
+                </div><!--form-group end-->
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <input type="email" name="email" id="email" placeholder="Email" />
+                </div><!--form-group end-->
+              </div>
+              <div class="col-md-4">
+                <div class="form-group select-tg">
+                  <select id="coursesList3"></select>
+                  <script src="courses.js"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      var coursesList = document.getElementById("coursesList3");
+                      var coursesHTML = courses.map(function (course, index) {
+                        return `<option value="${index}">${course.name}</option>`;
+                      });
+                      coursesList.innerHTML = coursesHTML.join("");
+                    });
+                  </script>
+                </div><!--form-group end-->
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <textarea name="message" id="message" placeholder="Message"></textarea>
+                </div><!--form-group end-->
+              </div>
+            </div>
+          </form><!--newsletter-form end-->
+        </div>
+      </div>
+    </div><!--newsletter-sec end-->
+  </div>
+</section>
+
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    emailjs.init("D2I1TjrXelFqq-gLN"); // Replace with your EmailJS user ID
+
+    // Attach click event listener to the button
+    document.getElementById("joinUsButton").addEventListener("click", function (event) {
+      event.preventDefault(); // Prevent default form submission behavior
+
+      // Collect form data
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var course = document.getElementById("coursesList3");
+      var course_name = course.options[course.selectedIndex].text;
+      var message = document.getElementById("message").value;
+
+      // Send email using EmailJS
+      emailjs.send("service_d6byzr5", "template_vcwywc5", {
+        from_name: name,
+        email: email,
+        course: course_name,
+        message: message
+      })
+      .then(function(response) {
+        console.log("Email sent successfully", response);
+        alert("Email sent successfully!");
+      }, function(error) {
+        console.error("Email sending failed", error);
+        alert("Failed to send email. Please try again later.");
+      });
+    });
+  });
+</script>
+<footer>
+    <div class="container">
+      <div class="top-footer">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="widget widget-about">
+              <img class="websitelogo" src="assets/img/logo.png" alt="" />
+              <p>
+                Vivamus porta efficitur nibh nec convallis. Vestibulum egestas
+                eleifend justo. Ut tellus ipsum, accumsan
+              </p>
+            </div>
+            <!--widget-about end-->
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="widget widget-contact">
+              <ul class="contact-add">
+                <li>
+                  <div 
+                    style="cursor: pointer;"
+                    href="javascript:void(0);"
+                    onclick="sendMessage3();"
+                    class="contact-info">
+                      <i
+                        class="fa fa-phone"
+                        style="
+                          font-size: 20px;
+                          vertical-align: top;
+                          position: relative;
+                          top: 3px;
+                          right: 6px;
+                          color: #1468ce;
+                          transform: rotate(0deg);
+                        "
+                      ></i>
+                      <div class="contact-tt">
+                        <h4>Call</h4>
+                        <span>+92 331 4488908</span>
+                      </div>
+                    </div>
+                  <!--contact-info end-->
+                </li>
+                <li>
+                  <div class="contact-info">
+                    <i
+                      class="fa fa-clock-o"
+                      style="
+                        font-size: 20px;
+                        vertical-align: top;
+                        color: #1468ce;
+                        position: relative;
+                        top: 3px;
+                        right: 6px;
+                      "
+                    ></i>
+                    <div class="contact-tt">
+                      <h4>Work Time</h4>
+                      <span>Mon - Fri 8 AM - 5 PM</span>
+                    </div>
+                  </div>
+                  <!--contact-info end-->
+                </li>
+                <li>
+                  <div class="contact-info">
+                    <i
+                      class="fas fa-map-marker-alt"
+                      style="
+                        font-size: 20px;
+                        position: relative;
+                        vertical-align: top;
+                        top: 3px;
+                        right: 6px;
+                        color: #1468ce;
+                      "
+                    ></i>
+                    <div class="contact-tt">
+                      <h4>Address</h4>
+                      <span>Raiwind Road, Lahore</span>
+                    </div>
+                  </div>
+                  <!--contact-info end-->
+                </li>
+              </ul>
+            </div>
+            <!--widget-contact end-->
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="widget widget-links">
+              <h3 class="widget-title">Quick Links</h3>
+              <ul>
+                <li><a href="about.html" title="">About </a></li>
+                <li><a href="classes.html" title="">Classes</a></li>
+                <li><a href="teachers.html" title=""> Teachers </a></li>
+              </ul>
+            </div>
+            <!--widget-links end-->
+          </div>
+          <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="widget widget-iframe">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <!--widget-iframe end-->
+          </div>
+        </div>
+      </div>
+      <!--top-footer end-->
+      <div class="bottom-footer">
+        <div class="row align-items-center">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <p>© Copyrights 2024 Tadrees All rights reserved</p>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <ul class="social-links">
+              <li>
+                <a
+                  href="https://www.facebook.com/profile.php?id=61557367610427"
+                  title=""
+                  target="_blank"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/tadreespk/"
+                  title=""
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/tadreespk?igsh=MXRibHY2NTd5bTJ4MA%3D%3D&utm_source=qr"
+                  title=""
+                  target="_blank"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--bottom-footer end-->
+    </div>
+  </footer>
+      <!--footer end-->
+
+      <!--back to top begin-->
+      <button class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+      <!--back to top end-->
+    
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/html5lightbox.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/tweenMax.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>

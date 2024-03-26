@@ -1,0 +1,180 @@
+<div id="testimoniallist" class="row classes-row-carousel"></div>
+              <script src="testimonial.js"></script>
+              <script>
+                document.addEventListener("DOMContentLoaded",function(){
+                var testimoniallist = document.getElementById("testimoniallist");
+                var testimonialhtml = testimonial.map(function(testimonial,index){
+                  var coursesHtml = testimonial.courses.map(function(course, index) {
+                    var lineBreak = index % 2 === 1 ? '<br>' : '';
+    return `
+    <li class="category">
+        <i class="${course.icon}" style="color: #1468ce; margin-right: 5px;"></i>
+        ${course.name}
+    </li>${lineBreak}`;
+}).join("");
+
+              return `
+              <div  data-index="${index}" style="cursor:pointer" class="course-card">
+                <div class="d-flex flex-wrap align-items-center">
+                  <ul class="course-meta">
+                    <li style="font-weight: bold">
+                      <i
+                        class="fa fa-graduation-cap"
+                        style="
+                          font-size: 15px;
+                          position: relative;
+                          color: #1468ce;
+                          padding-right: 5px;
+                        "
+                      ></i
+                      >Course Studied.
+                    </li>
+                  </ul>
+                  <span
+                    ><img
+                      style="width: 100px"
+                      src="/assets//img/logo.png"
+                      alt=""
+                  /></span>
+                </div>
+                <div style="min-height: 60px">
+                  <div>
+                    <ul
+                      style="
+                      display:flex;
+                        margin-top: 10px;
+                        margin-right: 10px;
+                      "
+                    >
+                    ${coursesHtml}
+                  </div>
+                </div>
+                <div
+                  style="
+                    display: flex;
+                    margin-top: 15px;
+                    justify-content: center;
+                    align-items: center;
+                  "
+                  class="d-flex flex-wrap"
+                >
+                  <div class="posted-by">
+                    <img
+                      class="Testimonial"
+                      src="${testimonial.image}"
+                      alt=""
+                    />
+                    <a
+                      style="font-weight: bold"
+                      href="${testimonial.linkedin}"
+                      target="_blank"
+                      title=""
+                      >${testimonial.name}</a
+                    >
+                  </div>
+                  <span class="locat" style="font-weight: bold">
+                    <i
+                      class="fas fa-laptop"
+                      style="
+                        font-size: 15px;
+                        position: relative;
+                        color: #1468ce;
+                        padding-right: 5px;
+                      "
+                    ></i
+                    >${testimonial.Designation}
+                  </span>
+                </div>
+              </div>
+              </div>
+            <!--courses-list end-->
+          </div>
+        </div>
+      </section>    
+            `})  
+            testimoniallist.innerHTML = testimonialhtml.join("");
+                var testimonialDIVS = document.querySelectorAll(".course-card");
+                testimonialDIVS.forEach(function(div) {
+                  div.addEventListener("click", function() {
+                    var index = div.getAttribute("data-index");
+                      console.log("data-index-->",index,`events.html?id=${parseInt(index) + 1}`)
+                      window.location.href = `event-single.html?id=${parseInt(index) + 1}`;
+                  });
+              });
+          })
+
+    </script>
+             
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>tadress</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tadrees- Website" />
+    <meta name="author" content="merkulove" />
+    <meta name="keywords" content="" />
+    <link rel="icon" href="assets/img/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="error-page">
+        <h2 class="page-title">Tadrees</h2>
+        <div class="container">
+          <div class="error-text">
+            <h2>Oops!</h2>
+            <h3>The page does not exist</h3>
+            <a href="index.html" title="" class="btn-default"
+              >Home Page <i class="fa fa-long-arrow-alt-right"></i
+            ></a>
+            <ul class="social-icons">
+              <li>
+                <a href="https://www.facebook.com/profile.php?id=61557367610427" title="" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              </li>
+              <li>
+                <a href="#" title=""><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/tadreespk/"
+                  title=""
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in"></i
+                ></a>
+              </li>
+            </ul>
+            <!--social-icons end-->
+          </div>
+          <!--error-text end-->
+        </div>
+      </div>
+      <!--error-page end-->
+    </div>
+    <!--wrapper end-->
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/isotope.js"></script>
+    <script src="assets/js/html5lightbox.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/tweenMax.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
+  </body>
+</html>
