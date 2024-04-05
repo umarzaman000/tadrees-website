@@ -42,29 +42,16 @@
             <!--logo end-->
             <ul class="contact-add d-flex flex-wrap">
               <li>
-               <div 
-                      style="cursor: pointer;"
-                      href="javascript:void(0);"
-                      onclick="sendMessage3();"
-                class="contact-info">
-                  <i
+                <div class="contact-info" onclick="sendMessage3()">
+                 
+                    <i class="fa fa-phone" style="font-size: 20px; vertical-align: top; position: relative; top: 6px; right: -3px; color: #1468ce; transform: rotate(0deg);"></i>
+                    <div class="contact-tt">
+                      <h4>Call</h4>
+                      <span>+92 331 4488908</span>
+                    </div>
                   
-                    class="fa fa-phone"
-                    style="
-                      font-size: 20px;
-                      vertical-align: top;
-                      position: relative;
-                      top: 6px;
-                      right: -3px;
-                      color: #1468ce;
-                      transform: rotate(0deg);
-                    "
-                  ></i>
-                  <div class="contact-tt">
-                    <h4>Call</h4>
-                    <span>+92 331 4488908</span>
-                  </div>
                 </div>
+                
                 <!--contact-info end-->
               </li>
               <li>
@@ -87,8 +74,9 @@
                 </div>
                 <!--contact-info end-->
               </li>
+
               <li>
-                <div class="contact-info">
+                <div class="contact-info"  onclick="window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s','_blank')">
                   <i
                     class="fas fa-map-marker-alt"
                     style="
@@ -100,6 +88,7 @@
                       color: #1468ce;
                     "
                   ></i>
+
                   <div class="contact-tt">
                     <h4>Address</h4>
                     <span>Raiwind Road, Lahore</span>
@@ -125,14 +114,12 @@
                 <li><a class="active" href="index.html" title="">Home</a></li>
                 <li>
                   <a href="about.html" title="">About</a>
-                  </li>
+                </li>
                 <li>
                   <a class="active" href="classes.html" title="">Classes</a>
-                  
                 </li>
                 <li>
                   <a href="teachers.html" title="">Teachers</a>
-                  
                 </li>
               </ul>
             </nav>
@@ -175,17 +162,8 @@
         <ul>
           <li><a href="index.html" title="">Home</a></li>
           <li><a href="about.html" title="">About</a></li>
-          <li><a href="events.html" title="">Events</a></li>
-          <li><a href="event-single.html" title="">Event Single</a></li>
-          <li><a href="schedule.html" title="">Schedule</a></li>
           <li><a href="classes.html" title="">Classes</a></li>
-          <li><a href="class-single.html" title="">Classe Single</a></li>
           <li><a href="teachers.html" title="">Teachers</a></li>
-          <li><a href="teacher-single.html" title="">Teacher Single</a></li>
-          <li><a href="blog.html" title="">Blog</a></li>
-          <li><a href="post.html" title="">Blog Single</a></li>
-          <li><a href="contacts.html" title="">Contacts</a></li>
-          <li><a href="error.html" title="">404</a></li>
         </ul>
       </div>
       <!--responsive-menu end-->
@@ -207,8 +185,10 @@
           <div class="pager-content text-center">
             <h2>Classes</h2>
             <ul>
-              <li><a href="#" title="">Home</a></li>
-              <li><span>Classes</span></li>
+              <li><a href="/" title="">Home</a></li>
+              <li>
+                <a href="/classes.html"><span>Classes</span></a>
+              </li>
             </ul>
           </div>
           <!--pager-content end-->
@@ -219,7 +199,7 @@
 
       <section class="classes-page">
         <div class="container">
-                   <!--classes-banner end-->
+          <!--classes-banner end-->
           <div class="classes-section">
             <div class="classes-sec">
               <div id="coursesList" class="row"></div>
@@ -228,20 +208,18 @@
                 document.addEventListener("DOMContentLoaded", function () {
                   var coursesList = document.getElementById("coursesList");
                   var teacherHTML = courses.map(function (course, index) {
-                    
                     return `
                       <div 
-                      data-index="${index}"
+                      data-index="${index}" style= "cursor:pointer;"
                       class="col-md-custom coursetag-div">
                         <div class="classes-col">
                           <div class="class-thumb">
-                      <img style="height:180px;width:100%;cursor:pointer;"
-  
+                      <img style="height:180px;width:100%;"
                       src="${course.image}" 
                       />
-                            <a href="#" title="" class="crt-btn">
-                              <img src="assets/img/icon10.png" alt="" />
-                            </a>
+                      <a href="javascript:void(0);" class="crt-btn" >
+                            <i class="fab fa-whatsapp" style="font-size: 20px; position: relative; color: white; transform: rotate(0deg);"></i>
+                        </a>
                           </div>
                           <div class="class-info">
                       <h3 style="cursor:pointer" class="coursetag">
@@ -276,20 +254,43 @@
                       </div>
                     `;
                   });
-              
+
                   coursesList.innerHTML = teacherHTML.join("");
-                  
-                  var coursesDivs = document.querySelectorAll("#coursesList > .coursetag-div");
+
+                  var coursesDivs = document.querySelectorAll(
+                    "#coursesList > .coursetag-div"
+                  );
                   coursesDivs.forEach(function (div, index) {
                     div.addEventListener("click", function () {
-                      console.log("data-index-->", index, `class-single.html?id=${index + 1}`);
+                      console.log(
+                        "data-index-->",
+                        index,
+                        `class-single.html?id=${index + 1}`
+                      );
                       window.location.href = `class-single.html?id=${parseInt(index) + 1}`;
+                    });
+                  });
+                  function sendMessage3(event, course) {
+                    event.stopPropagation();
+                    var prefilledText = course.whatsappMessage;
+                    var phoneNumber = "923314488908"; // Update with the target phone number
+                    var whatsappLink =
+                      "https://wa.me/" +
+                      phoneNumber +
+                      "?text=" +
+                      encodeURIComponent(prefilledText);
+                    window.open(whatsappLink, "_blank");
+                  }
+
+                  // Add event listener to each class-thumb
+                  var classThumbs = document.querySelectorAll(".crt-btn");
+                  classThumbs.forEach(function (thumb, index) {
+                    thumb.addEventListener("click", function (event) {
+                      sendMessage3(event, courses[index]);
                     });
                   });
                 });
               </script>
-              
- 
             </div>
           </div>
         </div>
@@ -306,46 +307,44 @@
                     Join us <br />
                     and stay tuned!
                   </h2>
-                  <a href="contacts.html" title="" class="btn-default"
-                    >Join Us <i class="fa fa-long-arrow-alt-right"></i
-                  ></a>
+                  <button id="joinUsButton" class="btn-default">Join Us <i class="fa fa-long-arrow-alt-right"></i></button>
                 </div>
                 <!--newsz-ltr-text end-->
               </div>
               <div class="col-lg-8">
-                <form class="newsletter-form">
+                <form id="newsletterForm" class="newsletter-form">
                   <div class="row">
                     <div class="col-md-4">
                       <div class="form-group">
-                        <input type="text" name="name" placeholder="Name" />
+                        <input type="text" name="name" id="name" placeholder="Name" />
                       </div>
                       <!--form-group end-->
                     </div>
                     <div class="col-md-4">
                       <div class="form-group">
-                        <input type="email" name="email" placeholder="Email" />
+                        <input type="email" name="email" id="email" placeholder="Email" />
                       </div>
                       <!--form-group end-->
                     </div>
                     <div class="col-md-4">
                       <div class="form-group select-tg">
-                        <select>
-                          <option>Class</option>
-                          <option>Class</option>
-                          <option>Class</option>
-                          <option>Class</option>
-                          <option>Class</option>
-                          <option>Class</option>
-                        </select>
+                      <select id="coursesList3"></select>
+                  <script src="courses.js"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      var coursesList = document.getElementById("coursesList3");
+                      var coursesHTML = courses.map(function (course, index) {
+                        return `<option value="${index}">${course.name}</option>`;
+                      });
+                      coursesList.innerHTML = coursesHTML.join("");
+                    });
+                  </script>
                       </div>
                       <!--form-group end-->
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <textarea
-                          name="message"
-                          placeholder="Message"
-                        ></textarea>
+                          <textarea name="message" id="message" placeholder="Message"></textarea>
                       </div>
                       <!--form-group end-->
                     </div>
@@ -359,16 +358,51 @@
         </div>
       </section>
       <!--newsletter-sec end-->
-
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          emailjs.init("D2I1TjrXelFqq-gLN"); // Replace with your EmailJS user ID
+      
+          // Attach click event listener to the button
+          document.getElementById("joinUsButton").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default form submission behavior
+      
+            // Collect form data
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var course = document.getElementById("coursesList3");
+            var course_name = course.options[course.selectedIndex].text;
+            var message = document.getElementById("message").value;
+      
+            // Send email using EmailJS
+            emailjs.send("service_d6byzr5", "template_vcwywc5", {
+              from_name: name,
+              email: email,
+              course: course_name,
+              message: message
+            })
+            .then(function(response) {
+              console.log("Email sent successfully", response);
+              alert("Email sent successfully!");
+            }, function(error) {
+              console.error("Email sending failed", error);
+              alert("Failed to send email. Please try again later.");
+            });
+          });
+        });
+      </script>
       <footer>
         <div class="container">
+          <div class="col-lg-14">
+            <div class="widget widget-iframe" style="border: 2px solid #43DE4D; margin-bottom: 40px; border-radius: 50px;">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s" width="600" height="450" style="border:0; border-radius: 50px;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+          </div>  
           <div class="top-footer">
             <div class="row">
               <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="widget widget-about">
-                  <a href="index.html">
                   <img class="websitelogo" src="assets/img/logo.png" alt="" />
-                </a>
                   <p>
                     Vivamus porta efficitur nibh nec convallis. Vestibulum
                     egestas eleifend justo. Ut tellus ipsum, accumsan
@@ -376,6 +410,7 @@
                 </div>
                 <!--widget-about end-->
               </div>
+              
               <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="widget widget-contact">
                   <ul class="contact-add">
@@ -425,7 +460,7 @@
                       <!--contact-info end-->
                     </li>
                     <li>
-                      <div class="contact-info">
+                      <div class="contact-info" onclick="window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s','_blank')">
                         <i
                           class="fas fa-map-marker-alt"
                           style="
@@ -459,12 +494,7 @@
                 </div>
                 <!--widget-links end-->
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="widget widget-iframe">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-                </div>
-                <!--widget-iframe end-->
-              </div>
+              
             </div>
           </div>
           <!--top-footer end-->

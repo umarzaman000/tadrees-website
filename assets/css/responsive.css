@@ -129,6 +129,10 @@
         font-size: 14px;
     }
 }
+@media only screen and (min-width: 991px) {
+    .abt-col {
+        min-height:195px;
+    }}
 @media only screen and (max-width: 991px) {
     header .header-content .contact-add,
     header .navigation-bar {
@@ -227,6 +231,11 @@
     .classes-page {
         padding: 100px 0;
     }
+    .top-footer .row {
+        margin-bottom: -50px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
     .classes-page .classes-banner {
         padding: 90px 20px;
     }
@@ -258,6 +267,11 @@
     .pager-section {
         background: #f2f7fd;
     }
+    .col-lg-3{
+        min-height: 185px;
+    }
+    
+
     .masonary li.width5 {
         padding-left: 9.5px;
     }
@@ -310,6 +324,9 @@
     }
     .about-us-section {
         padding: 70px 0;
+    }
+    .mw-100{
+        display: none;
     }
     .classes-section .sec-title {
         max-width: 75%;

@@ -54,13 +54,8 @@
             <!--logo end-->
             <ul class="contact-add d-flex flex-wrap">
               <li>
-               <div 
-                      style="cursor: pointer;"
-                      href="javascript:void(0);"
-                      onclick="sendMessage3();"
-                class="contact-info">
+                <div class="contact-info"onclick="sendMessage3()" style="cursor: pointer;">
                   <i
-                  
                     class="fa fa-phone"
                     style="
                       font-size: 20px;
@@ -99,8 +94,9 @@
                 </div>
                 <!--contact-info end-->
               </li>
+
               <li>
-                <div class="contact-info">
+                <div class="contact-info"  onclick="window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s','_blank')">
                   <i
                     class="fas fa-map-marker-alt"
                     style="
@@ -112,6 +108,7 @@
                       color: #1468ce;
                     "
                   ></i>
+
                   <div class="contact-tt">
                     <h4>Address</h4>
                     <span>Raiwind Road, Lahore</span>
@@ -135,15 +132,9 @@
             <nav>
               <ul>
                 <li><a class="active" href="index.html" title="">Home</a></li>
-                <li>
-                  <a href="about.html" title="">About</a>
-                </li>
-                <li>
-                  <a class="active" href="classes.html" title="">Classes</a>
-                </li>
-                <li>
-                  <a href="teachers.html" title="">Teachers</a>
-                </li>
+                <li><a href="about.html" title="">About</a></li>
+                <li><a class="active" href="classes.html" title="">Classes</a></li>
+                <li><a href="teachers.html" title="">Teachers</a></li>
               </ul>
             </nav>
             <!--nav end-->
@@ -195,169 +186,123 @@
       <!--class-single-banner end-->
 
       <section class="page-content style2">
-        
         <div class="container">
           <section class="class-single-banner">
-            <img style="object-fit: cover;" src="/assets/img/new development.jpeg" alt="" class="w-100" />
+            <img style="object-fit: cover;" src="/assets/img/bannerclasssingle.jpg" alt="" class="w-100" />
           </section>
           <div class="row">
             <div id="coursesList"></div>
             <script src="courses.js"></script>
             <script>
               document.addEventListener("DOMContentLoaded", function () {
-                var coursesList = document.getElementById("coursesList");
-                var urlParams = new URLSearchParams(window.location.search);
-                var courseId = urlParams.get("id");
-
-                var filteredCourses = [];
-                if (courseId) {
-                  var index = parseInt(courseId) - 1;
-                  filteredCourses.push(courses[index]);
-                } else {
-                  filteredCourses.push(courses[0]);
-                }
-
-                var coursesHTML = filteredCourses.map(function (course, index) {
-                  console.log("course---newwww>", course);
-                  return `  
- 
-                <div class="col-xl-custom">
-                  <div class="class-single-content">
-                    <h2>${course.name}</h2>
-                    <ul class="meta-box">
-                      <li><a href="#" title="">Home</a></li>
-                      <li><span>Classes</span></li>
-                    </ul>
-                 <div class="class-gallery">
-                      <div class="class-gallery-img">
-                        <a
-                          href="https://via.placeholder.com/761x400"
-                          title=""
-                          class="html5lightbox"
-                          data-group="set1"
-                        >
-                          <img src="${course.image}" alt="" />
-                        </a>
-                      </div>
-                      <!--class-gallery-img end-->
-                      <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-3">
-                          <div class="class-gallery-img">
-                            <a
-                              href="https://via.placeholder.com/1000x704"
-                              title=""
-                              class="html5lightbox"
-                              data-group="set1"
-                            >
-                              <img
-                                src="${course.image}"
-                                alt=""
-                              />
-                            </a>
+                  var coursesList = document.getElementById("coursesList");
+                  var urlParams = new URLSearchParams(window.location.search);
+                  var courseId = urlParams.get("id");
+          
+                  var filteredCourses = [];
+                  if (courseId) {
+                      var index = parseInt(courseId) - 1;
+                      filteredCourses.push(courses[index]);
+                  } else {
+                      filteredCourses.push(courses[0]);
+                  }
+                  var coursesHTML = filteredCourses.map(function (course, index) {
+                  var learningshtml = course.learnings.map(function (course1, index) {
+                          var lineBreak = index % 4 === 0 && index !== 0 ? '</ul>' : '';
+                          var ulOpeningTag = index % 4 === 0 ? '<ul class="ordrd">' : '';
+                          var ulClosingTag = index % 4 === 3 || index === course.learnings.length - 1 ? '</ul>' : '';
+                          return `${lineBreak}${ulOpeningTag}<li>${course1.name}</li>${ulClosingTag}`;
+                      }).join("");
+          
+                      return `
+                          <div class="col-xl-custom">
+                              <div class="class-single-content">
+                                  <h2>${course.name}</h2>
+                                  <ul class="meta-box">
+                                      <li><a href="/" title="">Home</a></li>
+                                      <li><a href="/classes.html"><span>Classes</span></a></li>
+                                  </ul>
+                                  <div class="class-gallery">
+                                      <div class="class-gallery-img">
+                                          <a href="https://via.placeholder.com/761x400" title="" class="html5lightbox" data-group="set1">
+                                              <img src="${course.image}" alt="" />
+                                          </a>
+                                      </div>
+                                      <!--class-gallery-img end-->
+                                      <div class="row">
+                                          <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                              <div class="class-gallery-img">
+                                                  <a href="https://via.placeholder.com/1000x704" title="" class="html5lightbox" data-group="set1">
+                                                      <img src="${course.image1}" alt="" />
+                                                  </a>
+                                              </div>
+                                              <!--class-gallery-img end-->
+                                          </div>
+                                          <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                              <div class="class-gallery-img">
+                                                  <a href="https://via.placeholder.com/1000x667" title="" class="html5lightbox" data-group="set1">
+                                                      <img src="${course.image2}" alt="" />
+                                                  </a>
+                                              </div>
+                                              <!--class-gallery-img end-->
+                                          </div>
+                                          <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                              <div class="class-gallery-img">
+                                                  <a href="https://via.placeholder.com/1000x667" title="" class="html5lightbox" data-group="set1">
+                                                      <img src="${course.image3}" alt="" />
+                                                  </a>
+                                              </div>
+                                              <!--class-gallery-img end-->
+                                          </div>
+                                          <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                                              <div class="class-gallery-img">
+                                                  <a href="https://via.placeholder.com/1000x667" title="" class="html5lightbox" data-group="set1">
+                                                      <img src="${course.image4}" alt="" />
+                                                  </a>
+                                              </div>
+                                              <!--class-gallery-img end-->
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!--class-gallery end-->
+                                  <h3>What Will You Learn</h3>
+                                  <div class="rowbullets">
+                                      ${learningshtml}
+                                  </div>
+                                  <a href="classes.html" title="" class="btn-default">Enroll Now <i class="fa fa-long-arrow-alt-right"></i></a>
+                              </div>
+                              <!--class-single-content end-->
                           </div>
-                          <!--class-gallery-img end-->
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-3">
-                          <div class="class-gallery-img">
-                            <a
-                              href="https://via.placeholder.com/1000x667"
-                              title=""
-                              class="html5lightbox"
-                              data-group="set1"
-                            >
-                              <img
-                                src="${course.image}"
-                                alt=""
-                              />
-                            </a>
-                          </div>
-                          <!--class-gallery-img end-->
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-3">
-                          <div class="class-gallery-img">
-                            <a
-                              href="https://via.placeholder.com/1000x667"
-                              title=""
-                              class="html5lightbox"
-                              data-group="set1"
-                            >
-                              <img
-                                src="${course.image}"
-                                alt=""
-                              />
-                            </a>
-                          </div>
-                          <!--class-gallery-img end-->
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-3">
-                          <div class="class-gallery-img">
-                            <a
-                              href="https://via.placeholder.com/1000x667"
-                              title=""
-                              class="html5lightbox"
-                              data-group="set1"
-                            >
-                              <img
-                                src="${course.image}"
-                                alt=""
-                              />
-                            </a>
-                          </div>
-                          <!--class-gallery-img end-->
-                        </div>
-                      </div>
-                    </div>
-                    <!--class-gallery end-->
-                    
-                    <h3>Education Programs</h3>
-                    
-                    <h3>Activities Involved</h3>
-                    <div class="row">
-                      <div class="col-lg-6 col-md-6 col-sm-6">
-                        <ul class="ordrd">
-                          <li>Sensory Time</li>
-                          <li>Free Play with Technology Corner</li>
-                          <li>Puppet shows and skits</li>
-                        </ul>
-                      </div>
-                      <div class="col-lg-6 col-md-6 col-sm-6">
-                        <ul class="ordrd">
-                          <li>Creative Time</li>
-                          <li>Language Readiness</li>
-                          <li>Opportunities for fine and gross motor</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <a href="classes.html" title="" class="btn-default"
-                      >Enroll Now <i class="fa fa-long-arrow-alt-right"></i
-                    ></a>
-                  </div>
-                  <!--class-single-content end-->
-                </div>
-                `;
-                });
-
-                // Join the array of HTML strings and set it as innerHTML of the coursesList div
-                coursesList.innerHTML = coursesHTML.join("");
-
-                var courseDivs = document.querySelectorAll(".coursetag");
-                courseDivs.forEach(function (div) {
-                  div.addEventListener("click", function () {
-                    var index = div.getAttribute("data-index");
-                    console.log(
-                      "data-index-->",
-                      index,
-                      `class-single.html?id=${parseInt(index) + 1}`
-                    );
-                    window.location.href = `class-single.html?id=${
-                      parseInt(index) + 1
-                    }`;
-                  });
-                });
-              });
-            </script>
-            <div class="col-xl-4 col-lg-4">
-              <div class="sidebar class-sidebar">
+                      `;
+                  }).join("");
+          coursesList.innerHTML = coursesHTML;
+        });
+          </script>
+          <div class="col-xl-4 col-lg-4" id="coursesList1">
+              <script src="courses.js"></script>
+              <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                  var coursesList = document.getElementById("coursesList1");
+                  var urlParams = new URLSearchParams(window.location.search);
+                  var courseId = urlParams.get("id");
+          
+                  var filteredCourses = [];
+                  if (courseId) {
+                      var index = parseInt(courseId) - 1;
+                      filteredCourses.push(courses[index]);
+                  } else {
+                      filteredCourses.push(courses[0]);
+                  }
+                  var coursesHTML = filteredCourses.map(function (course, index) {
+                  var learningshtml = course.learnings.map(function (course1, index) {
+                          var lineBreak = index % 4 === 0 && index !== 0 ? '</ul>' : '';
+                          var ulOpeningTag = index % 4 === 0 ? '<ul class="ordrd">' : '';
+                          var ulClosingTag = index % 4 === 3 || index === course.learnings.length - 1 ? '</ul>' : '';
+                          return `${lineBreak}${ulOpeningTag}<li>${course1.name}</li>${ulClosingTag}`;
+                      }).join("");
+          
+                      return `
+                <div class="sidebar class-sidebar">
                 <div class="widget widget-information">
                   <h3 class="widget-title">Class Information</h3>
                   <ul>
@@ -367,30 +312,28 @@
                     </li>
                     <li>
                       <h4>Age</h4>
-                      <span>9-14 Years</span>
+                      <span>16 Years</span>
                     </li>
                     <li>
                       <h4>Class Size</h4>
-                      <span>20-30 Kids</span>
+                      <span>15</span>
                     </li>
                     <li>
                       <h4>Coures Duration</h4>
-                      <span>25 hours</span>
+                      <span>${course.duration}</span>
                     </li>
                   </ul>
                   <div class="tech-info">
-                    <div class="tech-tble">
-                      <img src="https://via.placeholder.com/54x54" alt="" />
-                      <div class="tch-info">
-                        <h3>Hubert Franck</h3>
-                        <span>English Teacher</span>
-                      </div>
-                    </div>
-                    <a href="contacts.html" title="" class="btn-default"
+                    <p class="btn-default"
                       >Enroll Now <i class="fa fa-long-arrow-alt-right"></i
-                    ></a>
+                    ></p>
                   </div>
                 </div>
+                `;
+                  }).join("");
+          coursesList.innerHTML = coursesHTML;
+        });
+          </script>
                 <!--widget-information end-->
                 <div class="widget widget-class">
                   <div class="wd-class-post">
@@ -407,11 +350,11 @@
                 <!--widget-class end-->
                 <div class="widget widget-classes-carousel">
                   <h3 class="widget-title">Other Classes</h3>
-                  <div id="coursesList3"class="classes-section classes-section-sidebar classes-widget-slider">
+                  <div id="coursesList7"class="classes-section classes-section-sidebar classes-widget-slider">
               <script src="courses.js"></script>
               <script>
                 document.addEventListener("DOMContentLoaded", function () {
-                  var coursesList3 = document.getElementById("coursesList3");
+                  var coursesList4 = document.getElementById("coursesList7");
                   var urlParams = new URLSearchParams(window.location.search);
                   var courseId = urlParams.get("id");
                   console.log(courseId)
@@ -432,9 +375,9 @@
                       <div class="class-thumb">
                       <img style="height:180px;width:100%;"
                       src="${courseall.image}" />
-                            <a href="#" title="" class="crt-btn">
-                              <img src="assets/img/icon10.png" alt="" />
-                            </a>
+                      <a href="javascript:void(0);" class="crt-btn" >
+                            <i class="fab fa-whatsapp" style="font-size: 20px; position: relative; color: white; transform: rotate(0deg);"></i>
+                      </a>
                           </div>
                           <div class="class-info">
                       <h3>
@@ -473,14 +416,20 @@
                 `;
                   });
               
-                  coursesList3.innerHTML = teacherHTML.join("");
-                  var courseslist3Divs = document.querySelectorAll(".coursesList3");
-                  courseslist3Divs.forEach(function (div, index) {
-                    div.addEventListener("click", function () {
-                      console.log("data-index-->", index, `class-single.html?id=${index + 1}`);
-                      window.location.href = `class-single.html?id=${index + 1}`;
-                    });
-                  });
+                  coursesList7.innerHTML = teacherHTML.join("");
+            function sendMessage3(event, course) {
+            event.stopPropagation();
+            var prefilledText = course.whatsappMessage;
+            var phoneNumber = "923314488908"; // Update with the target phone number
+            var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(prefilledText);
+            window.open(whatsappLink, "_blank");
+        }
+var classThumbs = document.querySelectorAll(".crt-btn");
+        classThumbs.forEach(function (thumb, index) {
+            thumb.addEventListener("click", function (event) {
+                sendMessage3(event, courses[index]);
+            });
+        });
                 });
               </script>
                 <!--widget-classes-carousel end-->
@@ -543,46 +492,45 @@
                     Join us <br />
                     and stay tuned!
                   </h2>
-                  <a href="contacts.html" title="" class="btn-default"
-                    >Join Us <i class="fa fa-long-arrow-alt-right"></i
-                  ></a>
+                  <button id="joinUsButton" class="btn-default">Join Us <i class="fa fa-long-arrow-alt-right"></i></button>
                 </div>
                 <!--newsz-ltr-text end-->
               </div>
               <div class="col-lg-8">
-                <form class="newsletter-form">
+                <form id="newsletterForm" class="newsletter-form">
                   <div class="row">
                     <div class="col-md-4">
                       <div class="form-group">
-                        <input type="text" name="name" placeholder="Name" />
+                        <input type="text" name="name" id="name" placeholder="Name" />
                       </div>
                       <!--form-group end-->
                     </div>
                     <div class="col-md-4">
                       <div class="form-group">
-                        <input type="email" name="email" placeholder="Email" />
+                        <input type="email" name="email" id="email" placeholder="Email" />
                       </div>
                       <!--form-group end-->
                     </div>
                     <div class="col-md-4">
                       <div class="form-group select-tg">
-                        <select>
-                          <option>Class</option>
-                          <option>Class</option>
-                          <option>Class</option>
-                          <option>Class</option>
-                          <option>Class</option>
-                          <option>Class</option>
-                        </select>
+                  <select id="coursesList3"></select>
+                  <script src="courses.js"></script>
+                  <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                      var coursesList3 = document.getElementById("coursesList3");
+                      var coursesHTML = courses.map(function (course1, index) {
+                        console.log("=====?",course1.name)
+                        return `<option value="${index}">${course1.name}</option>`;
+                      });
+                      coursesList3.innerHTML = coursesHTML.join("");
+                    });
+                  </script>
                       </div>
                       <!--form-group end-->
                     </div>
                     <div class="col-md-12">
                       <div class="form-group">
-                        <textarea
-                          name="message"
-                          placeholder="Message"
-                        ></textarea>
+                          <textarea name="message" id="message" placeholder="Message"></textarea>
                       </div>
                       <!--form-group end-->
                     </div>
@@ -596,9 +544,46 @@
         </div>
       </section>
       <!--newsletter-sec end-->
-
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          emailjs.init("D2I1TjrXelFqq-gLN"); // Replace with your EmailJS user ID
+      
+          // Attach click event listener to the button
+          document.getElementById("joinUsButton").addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent default form submission behavior
+      
+            // Collect form data
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var course = document.getElementById("coursesList3");
+            var course_name = course.options[course.selectedIndex].text;
+            var message = document.getElementById("message").value;
+      
+            // Send email using EmailJS
+            emailjs.send("service_d6byzr5", "template_vcwywc5", {
+              from_name: name,
+              email: email,
+              course: course_name,
+              message: message
+            })
+            .then(function(response) {
+              console.log("Email sent successfully", response);
+              alert("Email sent successfully!");
+            }, function(error) {
+              console.error("Email sending failed", error);
+              alert("Failed to send email. Please try again later.");
+            });
+          });
+        });
+      </script>
       <footer>
-        <div class="container">
+      <div class="container">
+        <div class="col-lg-14">
+          <div class="widget widget-iframe" style="border: 2px solid #43DE4D; margin-bottom: 40px; border-radius: 50px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s" width="600" height="450" style="border:0; border-radius: 50px;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        </div>  
           <div class="top-footer">
             <div class="row">
               <div class="col-lg-3 col-md-6 col-sm-6">
@@ -662,7 +647,7 @@
                       <!--contact-info end-->
                     </li>
                     <li>
-                      <div class="contact-info">
+                      <div class="contact-info"  onclick="window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s','_blank')">
                         <i
                           class="fas fa-map-marker-alt"
                           style="
@@ -696,12 +681,7 @@
                 </div>
                 <!--widget-links end-->
               </div>
-              <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="widget widget-iframe">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                  
-                </div>
-                <!--widget-iframe end-->
-              </div>
+              
             </div>
           </div>
           <!--top-footer end-->

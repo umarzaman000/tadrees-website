@@ -1,42 +1,47 @@
+
+
 .Testimonial {
   width: 30px;
-}
-@media only screen and (min-width: 992px) {
-  .col-lg-6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 90%;
-    max-width: 100%;
-  }
 }
 section {
   display: block;
   position: relative;
   padding-top: 50px;
 }
-@media (min-width: 992px){
-.col-lg-6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 90%;
-    max-width: 100%;
-}}
+@media only screen and (max-width: 992px) {
+  .elements-bg-full,.elements-bg1,.elements-bg2,.elements-bg3,.elements-bg4,.elements-bg-outline,.elements-bg-circleimg,.elements-bg-circleimg1,.elements-bg-circleimg2 {
+    display: none;
+  }
+}
+
 .course-section .courses-list .course-card:nth-child(2) {
   left: 0px;
 }
 .course-section .courses-list {
   margin-top: 0px;
 }
-@media (min-width: 1200px){
-.col-xl-custom {
+@media (min-width: 1200px) {
+  .col-xl-custom {
     -ms-flex: 0 0 66.66667%;
     flex: 0 0 66.66667%;
     max-width: 100%;
-}}
+  }
+}
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  justify-content: space-between;
+}
 .w-100 {
   width: 100% !important;
   height: 400px !important;
 }
 
-.uld{
+.uld {
   display: flex;
   flex-direction: row;
 }
@@ -44,6 +49,17 @@ section {
   .uld {
     display: flex;
     flex-direction: column;
+  }
+}
+.rowbullets {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+@media only screen and (max-width: 1048px) {
+  .rowbullets {
+    display: flex;
+    flex-direction: column !important;
   }
 }
 @media only screen and (max-width: 440px) {
@@ -60,23 +76,15 @@ section {
   margin-right: 10px;
   margin-top: 10px;
   line-height: 24px;
-  background-color:#b8de45;
+  background-color: #b8de45;
   border-radius: 30px;
 }
 .classes-page {
   padding: 0px 0;
 }
-
 @media (min-width: 992px) {
-  .col-lg-6 {
-    -ms-flex: 0 0 50%;
-    flex: 0 0 100% !important;
-    max-width: 90% !important;
-  }
-}
-@media (min-width: 992px){
-.col-md-custom {
-   -ms-flex: 0 0 33%;
+  .col-md-custom {
+    -ms-flex: 0 0 33%;
     flex: 0 0 33%;
     max-width: 33%;
   }

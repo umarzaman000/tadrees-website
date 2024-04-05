@@ -42,14 +42,12 @@
                   <img class="websitelogo" src="assets/img/logo.png" alt="" />
                 </a>
               </div>
+
+                
               <!--logo end-->
               <ul class="contact-add d-flex flex-wrap">
                 <li>
-                  <div 
-                     style="cursor: pointer;"
-                      href="javascript:void(0);"
-                      onclick="sendMessage3();"
-                  class="contact-info">
+                  <div class="contact-info"onclick="sendMessage3()" style="cursor: pointer;">
                     <i
                       class="fa fa-phone"
                       style="
@@ -90,18 +88,8 @@
                   <!--contact-info end-->
                 </li>
                 <li>
-                  <div class="contact-info">
-                    <i
-                      class="fas fa-map-marker-alt"
-                      style="
-                        font-size: 20px;
-                        position: relative;
-                        vertical-align: top;
-                        top: 6px;
-                        right: -3px;
-                        color: #1468ce;
-                      "
-                    ></i>
+                  <div class="contact-info" onclick="window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s','_blank')">
+                    <i class="fas fa-map-marker-alt" style="font-size: 20px; position: relative; vertical-align: top; top: 6px; right: -3px; color: #1468ce;"></i>
                     <div class="contact-tt">
                       <h4>Address</h4>
                       <span>Raiwind Road, Lahore</span>
@@ -109,6 +97,7 @@
                   </div>
                   <!--contact-info end-->
                 </li>
+                
               </ul>
               <!--contact-information end-->
               <div class="menu-btn">
@@ -175,15 +164,9 @@
           <ul>
             <li><a href="index.html" title="">Home</a></li>
             <li><a href="about.html" title="">About</a></li>
-            <li><a href="events.html" title="">Events</a></li>
-            <li><a href="event-single.html" title="">Event Single</a></li>
-            <li><a href="schedule.html" title="">Schedule</a></li>
             <li><a href="classes.html" title="">Classes</a></li>
-            <li><a href="class-single.html" title="">Classe Single</a></li>
             <li><a href="teachers.html" title="">Teachers</a></li>
-            <li><a href="teacher-single.html" title="">Teacher Single</a></li>
-            <li><a href="error.html" title="">404</a></li>
-          </ul>
+            </ul>
         </div>
         <!--responsive-menu end-->
     <section class="main-banner">
@@ -259,7 +242,6 @@
         <h2 class="main-title">Tadrees</h2>
       </div>
       <!--main-section end-->
-
       <section class="about-us-section">
         <div class="container">
           <div class="section-title text-center">
@@ -457,6 +439,7 @@
           <!-- abt-img end-->
         </div>
       </section>
+      
       <section class="classes-section">
         <div class="container">
           <div class="sec-title">
@@ -494,7 +477,7 @@
                     <div class="class-thumb" >
                         <img style="height:180px;width:100%" src="${course.image}"/>
                         <a href="javascript:void(0);" class="crt-btn" >
-                            <i class="fa fa-phone" style="font-size: 20px; position: relative; color: white; transform: rotate(0deg);"></i>
+                            <i class="fab fa-whatsapp" style="font-size: 20px; position: relative; color: white;align-self:center;"></i>
                         </a>
                     </div>
                     <div class="class-info">
@@ -550,167 +533,144 @@
 
 
 
-    <section class="teachers-section">
-        <div class="container">
-          <div class="section-title text-center">
-            <h2>
-              Our <span>Awesome</span><br />
-              Teachers
-            </h2>
-            <p>
-              Quisque id ultrices tellus, ac sodales ex. Cras nec ante viverra,
-              bibendum justo eget, lacinia dui. Donec ligula ligula, elementum
-              sit amet
-            </p>
-          </div>
-          <div class="classes-sec">
-         <div id="teacherList" class="row classes-carousel"></div>
-          <!--section-title end-->
-          <script src="teacher.js"></script>
-      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          var teacherList = document.getElementById("teacherList");
-          var teacherHTML = teacher.map(function (teacher,index) {
-            
-            return `
-               <div>
-                <div class="row">
-                  <div style="cursor:pointer" class="col-lg-6 teacher-div" data-index="${index}">
-                    <div
-                  class="classes-col wow fadeInUp"
-                  data-wow-duration="1000ms"
-                >
-                  <div class="teacher-img">
-                    <img style="object-fit: cover;"
-                      src="${teacher.image}"
-                      alt=""
-                      class="w-100"
-                    />
-                    <div class="sc-div">
-                      <ul>
-                        <li>
-                          <a
-                            href="${teacher.linkedin}"
-                            target="_blank"
-                            title=""
-                            ><i class="fab fa-linkedin-in"></i
-                          ></a>
-                        </li>
-                      </ul>
-                      <span><img src="assets/img/plus.png" alt="" /></span>
-                    </div>
-                  </div>
-                  <div class="teacher-info">
-                    <h3 class="teachers">${teacher.name}</h3>
-                      <span>${teacher.designation}</span>
-                    
-                    
-                  </div>
-                </div>
-                    <!--teacher end-->
-                  </div>
-                </div>
-              </div>
-              <!--teachers end-->
-            </div>
-          </div>
-        </div>
-  
-                    
-                `;
-          });
-  
-                  // Join the array of HTML strings and set it as innerHTML of the coursesList div
-               teacherList.innerHTML = teacherHTML.join("");
-                var teacherDivs = document.querySelectorAll(".teacher-div");
-                  teacherDivs.forEach(function(div) {
-                  div.addEventListener("click", function() {
-                    var index = div.getAttribute("data-index");
-                      console.log("data-index-->",index,`teacher-single.html?id=${parseInt(index) + 1}`)
-                      window.location.href = `teacher-single.html?id=${parseInt(index) + 1}`;
-                  });
-              });
-          
-        });
-      </script>
-   <section class="course-section">
-    <div class="container">
-      <div class="sec-title">
-        <h2><span>Testimonial</span></h2>
-        <p>
-          ullam fringilla ipsum sed enim scelerisque, ac porttitor libero
-          egestas. Donec iaculis nisi eget bibendum efficitur. Lorem ipsum
-          dolor sit
-        </p>
-      </div>
-      <div class="classes-sec">
-        <div id="testimoniallist" class="row classes-row-carousel"></div>
-        <script src="testimonial.js"></script>
-        <script>
-          document.addEventListener("DOMContentLoaded", function() {
-            var testimoniallist = document.getElementById("testimoniallist");
-            var testimonialhtml = testimonial.map(function(testimonial, index) {
-              var coursesHtml = testimonial.courses.map(function(course, index) {
-                var lineBreak = index % 2 === 0 && index !== 0 ? '</ul>' : '';
-                var ulOpeningTag = index % 2 === 0 ? '<ul class="uld">' : '';
-                var ulClosingTag = index % 2 === 1 ? '</ul>' : '';
-                return `${lineBreak}${ulOpeningTag}
-                  <li class="category">
-                    <i class="${course.icon}" style="color: #1468ce; margin-right: 5px;"></i>
-                    ${course.name}
-                  </li>
-                  ${ulClosingTag}`;
-              }).join("");
-  
-              // Add a closing tag for the last ul if the number of courses is odd
-              if (testimonial.courses.length % 2 !== 0) {
-                coursesHtml += '</ul>';
-              }
-  
-              return `
-                <div data-index="${index}" style="cursor:pointer" class="course-card">
-                  <div class="d-flex flex-wrap align-items-center">
-                    <ul class="course-meta">
-                      <li style="font-weight: bold">
-                        <i class="fa fa-graduation-cap" style="font-size: 15px; position: relative; color: #1468ce; padding-right: 5px;"></i>Course Studied.
-                      </li>
-                    </ul>
-                    <span>
-                      <img style="width: 100px" src="/assets//img/logo.png" alt="">
-                    </span>
-                  </div>
-                  <div style="min-height: 60px">
-                    ${coursesHtml}
-                  </div>
-                  <div style="display: flex; margin-top: 15px;" class="d-flex flex-wrap">
-                    <div class="posted-by">
-                      <img class="Testimonial" src="${testimonial.image}" alt="">
-                      <a style="font-weight: bold" href="${testimonial.linkedin}" target="_blank" title="">${testimonial.name}</a>
-                    </div>
-                    <span class="locat" style="font-weight: bold">
-                      <i class="fas fa-laptop" style="font-size: 15px; position: relative; color: #1468ce; padding-right: 5px;"></i>${testimonial.Designation}
-                    </span>
-                  </div>
-                </div>
-              `;
-            }).join("");
-            
-            testimoniallist.innerHTML = testimonialhtml;
-  
-            var testimonialDIVS = document.querySelectorAll(".course-card");
-            testimonialDIVS.forEach(function(div) {
-              div.addEventListener("click", function() {
-                var index = div.getAttribute("data-index");
-                console.log("data-index-->", index, `events.html?id=${parseInt(index) + 1}`);
-                window.location.href = `event-single.html?id=${parseInt(index) + 1}`;
-              });
-            });
-          });
-        </script>
+<section class="teachers-section">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2>
+        Our <span>Awesome</span><br />
+        Teachers
+      </h2>
+      <p>
+        Quisque id ultrices tellus, ac sodales ex. Cras nec ante viverra,
+        bibendum justo eget, lacinia dui. Donec ligula ligula, elementum
+        sit amet
+      </p>
+    </div>
+    <div class="classes-sec">
+      <div id="teacherList" class="row classes-carousel">
+        <!-- Teachers will be dynamically generated here -->
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
+<script src="teacher.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var teacherList = document.getElementById("teacherList");
+    var teacherHTML = teacher.map(function (teacher, index) {
+      return `
+        <div style="cursor:pointer;" class="col-lg-6 teacher-div" data-index="${index}">
+          <div class="classes-col wow fadeInUp" data-wow-duration="1000ms">
+            <div class="teacher-img">
+              <img style="object-fit: cover;" src="${teacher.image}" alt="" class="w-100" />
+              <div class="sc-div">
+                <ul>
+                  <li>
+                    <a href="${teacher.linkedin}" target="_blank" title="" onclick="event.stopPropagation();"><i class="fab fa-linkedin-in"></i></a>
+                  </li>
+                </ul>
+                <span><img src="assets/img/plus.png" alt="" /></span>
+              </div>
+            </div>
+            <div class="teacher-info">
+              <h3 class="teachers">${teacher.name}</h3>
+              <span>${teacher.designation}</span>
+            </div>
+          </div>
+        </div>`;
+    });
+
+    // Join the array of HTML strings and set it as innerHTML of the teacherList div
+    teacherList.innerHTML = teacherHTML.join("");
+
+    var teacherDivs = document.querySelectorAll(".teacher-div");
+    teacherDivs.forEach(function (div) {
+      div.addEventListener("click", function () {
+        var index = div.getAttribute("data-index");
+        console.log("data-index-->", index, `teacher-single.html?id=${parseInt(index) + 1}`);
+        window.location.href = `teacher-single.html?id=${parseInt(index) + 1}`;
+      });
+    });
+  });
+</script>
+
+<section class="course-section">
+  <div class="container">
+      <div class="sec-title">
+          <h2><span>Testimonial</span></h2>
+          <p>
+              ullam fringilla ipsum sed enim scelerisque, ac porttitor libero egestas. Donec iaculis nisi eget
+              bibendum efficitur. Lorem ipsum dolor sit
+          </p>
+      </div>
+      <div class="classes-sec">
+          <div id="testimoniallist" class="row classes-row-carousel"></div>
+          <script src="testimonial.js"></script>
+          <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                  var testimoniallist = document.getElementById("testimoniallist");
+                  var testimonialhtml = testimonial.map(function (testimonial, index) {
+                      var coursesHtml = testimonial.courses.map(function (course, index) {
+                          var lineBreak = index % 2 === 0 && index !== 0 ? '</ul>' : '';
+                          var ulOpeningTag = index % 2 === 0 ? '<ul class="uld">' : '';
+                          var ulClosingTag = index % 2 === 1 ? '</ul>' : '';
+                          return `${lineBreak}${ulOpeningTag}
+                              <li class="category">
+                                  <i class="${course.icon}" style="color: #1468ce; margin-right: 5px;"></i>
+                                  ${course.name}
+                              </li>
+                              ${ulClosingTag}`;
+                      }).join("");
+
+                      // Add a closing tag for the last ul if the number of courses is odd
+                      if (testimonial.courses.length % 2 !== 0) {
+                          coursesHtml += '</ul>';
+                      }
+
+                      return `
+                          <div data-index="${index}" style="cursor:pointer;" class="course-card">
+                              <div class="d-flex flex-wrap align-items-center">
+                                  <ul class="course-meta">
+                                      <li style="font-weight: bold">
+                                          <i class="fa fa-graduation-cap" style="font-size: 15px; position: relative; color: #1468ce; padding-right: 5px;"></i>Course Studied.
+                                      </li>
+                                  </ul>
+                                  <span>
+                                      <img style="width: 100px" src="/assets//img/logo.png" alt="">
+                                  </span>
+                              </div>
+                              <div style="min-height: 60px">
+                                  ${coursesHtml}
+                              </div>
+                              <div style="display: flex; margin-top: 15px;" class="d-flex flex-wrap">
+                                  <div class="posted-by">
+                                      <img class="Testimonial" src="${testimonial.image}" alt="">
+                                      <a style="font-weight: bold" href="${testimonial.linkedin}" target="_blank" title="">${testimonial.name}</a>
+                                  </div>
+                                  <span class="locat" style="font-weight: bold">
+                                      <i class="fas fa-laptop" style="font-size: 15px; position: relative; color: #1468ce; padding-right: 5px;"></i>${testimonial.Designation}
+                                  </span>
+                              </div>
+                          </div>
+                      `;
+                  }).join("");
+
+                  testimoniallist.innerHTML = testimonialhtml;
+
+                  var testimonialDIVS = document.querySelectorAll(".course-card");
+                  testimonialDIVS.forEach(function (div) {
+                      div.addEventListener("click", function () {
+                          var index = div.getAttribute("data-index");
+                          console.log("data-index-->", index, `events.html?id=${parseInt(index) + 1}`);
+                          window.location.href = `event-single.html?id=${parseInt(index) + 1}`;
+                      });
+                  });
+              });
+          </script>
+      </div>
+  </div>
+</section>
+
 <section class="newsletter-section">
   <div class="container">
     <div class="newsletter-sec">
@@ -796,8 +756,26 @@
     });
   });
 </script>
+<script>
+  function sendMessage3() {
+    var prefilledText =
+      "Hi I Want To Enroll In Introduction To Web Development. ";
+    var phoneNumber = "923314488908"; // Update with the target phone number
+    var whatsappLink =
+      "https://wa.me/" +
+      phoneNumber +
+      "?text=" +
+      encodeURIComponent(prefilledText);
+    window.open(whatsappLink, "_blank");
+  }
+</script>
 <footer>
     <div class="container">
+      <div class="col-lg-14">
+        <div class="widget widget-iframe" style="border: 2px solid #43DE4D; margin-bottom: 40px; border-radius: 50px;">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s" width="600" height="450" style="border:0; border-radius: 50px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+      </div>  
       <div class="top-footer">
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
@@ -808,36 +786,41 @@
                 eleifend justo. Ut tellus ipsum, accumsan
               </p>
             </div>
-            <!--widget-about end-->
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="widget widget-contact">
               <ul class="contact-add">
                 <li>
-                  <div 
-                    style="cursor: pointer;"
-                    href="javascript:void(0);"
-                    onclick="sendMessage3();"
-                    class="contact-info">
-                      <i
-                        class="fa fa-phone"
-                        style="
-                          font-size: 20px;
-                          vertical-align: top;
-                          position: relative;
-                          top: 3px;
-                          right: 6px;
-                          color: #1468ce;
-                          transform: rotate(0deg);
-                        "
-                      ></i>
-                      <div class="contact-tt">
-                        <h4>Call</h4>
-                        <span>+92 331 4488908</span>
-                      </div>
+                  <div class="contact-info" style="cursor: pointer;">
+                    <i class="fa fa-phone" style="
+                      font-size: 20px;
+                      vertical-align: top;
+                      position: relative;
+                      top: 3px;
+                      right: 6px;
+                      color: #1468ce;
+                      transform: rotate(0deg);
+                    "></i>
+                    <div class="contact-tt">
+                      <h4>Call</h4>
+                      <span>+92 331 4488908</span>
                     </div>
-                  <!--contact-info end-->
+                  </div>
                 </li>
+                <script>
+                  function sendMessage3() {
+                 console.log("Clicked!");
+                  }
+                function checkScreenSize() {
+                    if (window.innerWidth >= 768) {
+                      document.querySelector(".contact-info").addEventListener("click", sendMessage3);
+                    } else {
+                      document.querySelector(".contact-info").removeEventListener("click", sendMessage3);
+                    }
+                  }
+                checkScreenSize();
+                window.addEventListener("resize", checkScreenSize);
+                </script>
                 <li>
                   <div class="contact-info">
                     <i
@@ -859,7 +842,7 @@
                   <!--contact-info end-->
                 </li>
                 <li>
-                  <div class="contact-info">
+                  <div class="contact-info" onclick="window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s','_blank')">
                     <i
                       class="fas fa-map-marker-alt"
                       style="
@@ -882,6 +865,7 @@
             </div>
             <!--widget-contact end-->
           </div>
+          
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="widget widget-links">
               <h3 class="widget-title">Quick Links</h3>
@@ -893,12 +877,7 @@
             </div>
             <!--widget-links end-->
           </div>
-          <div class="col-lg-3 col-md-6 col-sm-6">
-            <div class="widget widget-iframe">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-            <!--widget-iframe end-->
-          </div>
+          
         </div>
       </div>
       <!--top-footer end-->
@@ -944,7 +923,7 @@
 
       <!--back to top begin-->
       <button class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
+        <i style="align-self: center;" class="fas fa-arrow-up"></i>
       </button>
       <!--back to top end-->
     
