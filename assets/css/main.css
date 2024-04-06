@@ -101,6 +101,13 @@ nav,
 section {
   display: block;
 }
+.page-content.style2 {
+  padding: 0px 0 0px !important;
+}
+.class-sidebar .widget:last-child {
+  margin-bottom: 0;
+  margin-top: 40px;
+}
 .row {
   display: -ms-flexbox;
   display: flex;

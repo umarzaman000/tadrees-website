@@ -322,6 +322,9 @@
     .section-title > h2 {
         font-size: 40px;
     }
+    .class-single-content{
+        display: none;
+    }
     .about-us-section {
         padding: 70px 0;
     }
