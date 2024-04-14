@@ -458,6 +458,14 @@
                       .join("");
 
                     coursesList7.innerHTML = teacherHTML;
+                    var coursesList7 = document.querySelectorAll(".teacher-div");
+                    coursesList7.forEach(function (div) {
+                        div.addEventListener("click", function () {
+                            var index = div.getAttribute("data-index");
+                            console.log("data-index-->", index, `teacher-single.html?id=${parseInt(index) + 1}`);
+                            window.location.href = `teacher-single.html?id=${parseInt(index) + 1}`;
+                        });
+                    });
                   });
                 </script>
               </div>

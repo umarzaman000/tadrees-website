@@ -12,21 +12,20 @@ var courses = [
       { name: "Design Patterns" }
     ],
     name: "Intro To Web Development.",
-    image: "/assets/img/webdesignsnew .jpeg",
-    image1:"/assets/img/webdesings1.webp",
+    image: "/assets/img/webcode.jpg" ,
+    image1:"/assets/img/webdesignsnew .jpeg",
     image2:"/assets/img/webtest.jpg",
-    image3:"/assets/img/webcode.jpg",
+    image3:"/assets/img/webdesings1.webp",
     image4:"/assets/img/htmlcss.jpg",
     description: "Frontend Engineering is the art of crafting immersive and user-centric experiences on the web, shaping the visual and interactive aspects of websites and applications. Frontend Engineers play a pivotal role in bringing designs to life and ensuring seamless interaction between users and digital platforms.",
     prerequsite: "programing fundamentals.",
     whatsappMessage: "Hi I Want To Enroll In Intro To Web Development.",
     duration: "3 Months.",
     price: "RS. 21,000/Month.",
-    programoutline:"84 Lectures, 10 Assignments, 1 Project, 3Quizzes, Mid-term Evalution, Final Evalution.",
+    programoutline:"42 Lectures, 10 Assignments, 1 Project, 3Quizzes, Mid-term Evalution, Final Evalution.",
     classhours:"10 AM - 12 AM",
     studentage:"16 Years",
     classsize:"15 kidz"
-      
   },
   {
     learnings: [
