@@ -40,6 +40,6 @@ var teacher = [
     linkedin:
       "https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn%3Ali%3Afsd_profile%3AACoAACEHNUEB-j8YQQIRj9YzmNxnAUzzsHCO2Vo&keywords=khizar%20amin&origin=RICH_QUERY_TYPEAHEAD_HISTORY&position=1&searchId=284cdabe-3eaa-4101-9334-cd018a396a4e&sid=2zt&spellCorrectionEnabled=true",
     experiance: "10 years",
-    education: "ask",
+    education: "BS(CS)",
   },
 ];
