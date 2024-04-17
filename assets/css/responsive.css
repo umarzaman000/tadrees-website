@@ -268,10 +268,8 @@
         background: #f2f7fd;
     }
     .col-lg-3{
-        min-height: 185px;
+        min-height: 130px;
     }
-    
-
     .masonary li.width5 {
         padding-left: 9.5px;
     }
@@ -321,6 +319,9 @@
     .sec-title > h2,
     .section-title > h2 {
         font-size: 40px;
+    }
+    .class-sidebar .widget:last-child {
+        margin-bottom: 35px;
     }
     .class-single-content{
         display: none;
