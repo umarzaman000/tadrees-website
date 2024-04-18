@@ -25,8 +25,11 @@ var courses = [
     programoutline:"42 Lectures, 10 Assignments, 1 Project, 3 Quizzes, Mid-term Evalution, Final Evalution.",
     classhours:"10 AM - 12 AM",
     studentage:"16 Years",
-    classsize:"15 Students"
-  },
+    classsize:"15 Students",
+    lectures:"42 Lectures",
+    project:"1 Project",
+    quizzes:"3 Quizzes"
+   },
   {
     learnings: [
       { name: "Data Types" },
@@ -50,10 +53,16 @@ var courses = [
     duration: "6 Months",
     prerequsite: "intro to web development.",
     price: "RS. 21,000/Month",
-    programoutline:"84 Lectures, 10 Assignments, 1 Project, 3 Quizzes, Mid-term Evalution, Final Evalution.",
+    programoutline:"84 Lectures, 10 Assignments, 2 Project, 6 Quizzes, Mid-term Evalution, Final Evalution.",
     classhours:"10 AM - 12 AM",
     studentage:"16 Years",
-    classsize:"15 Students"
+    classsize:"15 Students",
+    lectures:"84 Lectures",
+    project:"2 Projects",
+    quizzes:"6 Quizzes"
+  
+  
+  
   },
   {
     learnings: [
@@ -78,10 +87,14 @@ var courses = [
     duration: "6 Months",
     prerequsite: "intro to web development.",
     price: "RS. 21,000/Month",
-    programoutline:"84 Lectures, 10 Assignments, 1 Project, 3 Quizzes, Mid-term Evalution, Final Evalution.",
+    programoutline:"84 Lectures, 10 Assignments, 2 Project, 6 Quizzes, Mid-term Evalution, Final Evalution.",
     classhours:"10 AM - 12 AM",
     studentage:"16 Years",
     classsize:"15 Students",
+    lectures:"84 Lectures",
+    project:"2 Projects",
+    quizzes:"6 Quizzes"
+  
   },
   {
     learnings: [
@@ -110,5 +123,8 @@ var courses = [
     classhours:"10 AM - 12 AM",
     studentage:"16 Years",
     classsize:"15 Students",
+    lectures:"42 Lectures",
+    project:"1 Project",
+    quizzes:"3 Quizzes"
   }
 ];
