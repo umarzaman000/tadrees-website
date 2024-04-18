@@ -37,16 +37,7 @@
         var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(prefilledText);
         window.open(whatsappLink, "_blank");
       }
-    
-      function checkScreenSize() {
-        if (window.innerWidth >= 768) {
-          document.querySelector(".contact-info").addEventListener("click", sendMessagefoter);
-        }
-      }
-    
-      checkScreenSize();
-      window.addEventListener("resize", checkScreenSize);
-    </script>
+  </script>
         <script>
       function sendMessagenavbar() {
         var prefilledText =
