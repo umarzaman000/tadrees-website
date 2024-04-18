@@ -663,13 +663,17 @@
     margin-bottom: 0px;
   }
   .main-banner {
-    padding: 50px 0;
+    padding: 0px 0;
   }
+  
   .sec-title > h2,
   .section-title > h2,
   .teachers-section .section-title > h2 {
     font-size: 27px;
     line-height: 36px;
+  }
+  .course-card{
+    border-radius: 10px !important;
   }
   .classes-section .sec-title {
     text-align: center;
