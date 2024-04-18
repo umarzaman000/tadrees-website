@@ -9,6 +9,22 @@
     font-size: 200px;
   }
 }
+/* Default border radius */
+.widget-iframe {
+  border-radius: 50px;
+}
+
+/* Media query for screen width less than 768px */
+@media (max-width: 768px) {
+  .widget-iframe {
+      border-radius: 10px !important;
+  }
+  .teacher-img > img{
+    border-radius: 10px !important;
+  }
+
+}
+
 @media only screen and (max-width: 1200px) {
   header .navigation-bar nav ul li {
     margin-right: 36px;
