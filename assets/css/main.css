@@ -618,7 +618,7 @@ header .navigation-bar nav ul ul ul {
   z-index: -1;
 }
 .main-banner {
-  padding: 64px 0;
+  padding: 50px 0;
 }
 .main-banner .banner-text > h2 {
   color: #2b2b2b;
@@ -706,7 +706,7 @@ header .navigation-bar nav ul ul ul {
   margin: 0 auto;
 }
 .about-us-section {
-  padding: 50px 0 100px;
+  padding: 50px 0 50px;
 }
 .about-us-section .about-sec {
   margin-bottom: 65px;
@@ -882,7 +882,7 @@ header .navigation-bar nav ul ul ul {
   margin-bottom: 9px;
 }
 .teachers-section {
-  padding: 45px 0 50px;
+  padding: 50px 0 50px;
 }
 .teachers-section .section-title > h2 {
   line-height: 58.93px;
@@ -1393,7 +1393,7 @@ footer {
   padding: 185px 0 72px;
 }
 footer .top-footer {
-  padding-bottom: 59px;
+  padding-bottom: 50px;
 }
 footer .widget-about > img {
   margin-bottom: 28px;
