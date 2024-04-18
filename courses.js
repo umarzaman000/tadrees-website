@@ -109,7 +109,7 @@ var courses = [
       { name: "Design Patterns" }
     ],
     name: "Programing Fundamentals",
-    image: "/assets/img/newimagebasic.jpeg",
+    image: "/assets/img/newlearn.png",
     image1:"/assets/img/codeimage.jpeg",
     image2:"/assets/img/codecolor .jpeg",
     image3:"/assets/img/lockimage.jpeg",
