@@ -665,7 +665,7 @@
   .main-banner {
     padding: 0px 0;
     padding-bottom: 50px;
-    padding-top: 20px;
+    padding-top: 50px !important;
   }
   
   .sec-title > h2,
