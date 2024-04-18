@@ -662,10 +662,13 @@
   .main-banner .banner-text p {
     margin-bottom: 0px;
   }
+  .header .header-content{
+    padding-bottom: 0px !important;
+  }
   .main-banner {
     padding: 0px 0;
     padding-bottom: 50px;
-    padding-top: 10px !important;
+    padding-top: 50px !important;
   }
   
   .sec-title > h2,
