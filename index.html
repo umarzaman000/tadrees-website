@@ -32,19 +32,15 @@
     ></script>
     <script>
       function sendMessagefoter() {
-        // Check if screen size is less than 992 pixels
-        if (window.innerWidth < 992) {
-          // If screen size is less than 992 pixels, return without executing the function
-          return;
+      if (window.innerWidth < 992) {
+         return;
         }
-    
         var prefilledText = "Hi I Want To Enroll In Introduction To Web Development.";
-        var phoneNumber = "923314488908"; // Update with the target phone number
+        var phoneNumber = "923314488908"; 
         var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(prefilledText);
         window.open(whatsappLink, "_blank");
       }
     </script>
-    
     <script>
       function sendMessagenavbar() {
         var prefilledText =
