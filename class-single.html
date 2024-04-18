@@ -26,6 +26,18 @@
     />
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
+    <script>
+      function sendMessagenavbar() {
+        var prefilledText = "Hi I Want To Enroll In Tadrees. ";
+        var phoneNumber = "923314488908";
+        var whatsappLink =
+          "https://wa.me/" +
+          phoneNumber +
+          "?text=" +
+          encodeURIComponent(prefilledText);
+        window.open(whatsappLink, "_blank");
+      }
+    </script>
   </head>
 
   <body>
@@ -41,10 +53,12 @@
             <!--logo end-->
             <ul class="contact-add d-flex flex-wrap">
               <li>
-                <div class="contact-info"
-                style="cursor: pointer;"
-                href="javascript:void(0);"
-                onclick="sendMessage3();">
+                <div
+                  class="contact-info"
+                  style="cursor: pointer"
+                  href="javascript:void(0);"
+                  onclick="sendMessagenavbar();"
+                >
                   <i
                     class="fa fa-phone"
                     style="
@@ -85,7 +99,10 @@
                 <!--contact-info end-->
               </li>
               <li>
-                <div class="contact-info" onclick="window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s','_blank')">
+                <div
+                  class="contact-info"
+                  onclick="window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s','_blank')"
+                >
                   <i
                     class="fas fa-map-marker-alt"
                     style="
@@ -172,6 +189,21 @@
       </div>
       <!--responsive-menu end-->
       <script>
+        function sendMessagefoter() {
+          if (window.innerWidth < 992) {
+            return;
+          }
+          var prefilledText = "Hi I Want To Enroll In Tadrees.";
+          var phoneNumber = "923314488908";
+          var whatsappLink =
+            "https://wa.me/" +
+            phoneNumber +
+            "?text=" +
+            encodeURIComponent(prefilledText);
+          window.open(whatsappLink, "_blank");
+        }
+      </script>
+      <script>
         function sendMessage3() {
           var prefilledText =
             "Hi I Want To Enroll In Introduction To Web Development. ";
@@ -185,13 +217,10 @@
         }
       </script>
       <section class="class-single-banner">
-        <img
-          style="object-fit: cover"
-          src="/assets/img/newokimage2.png"
-          alt=""
-          class="w-100"
-        </section>
-        />
+        <img style="object-fit: cover" src="/assets/img/newokimage2.png" alt=""
+        class="w-100"
+      </section>
+      />
       <!--class-single-banner end-->
       <!DOCTYPE html>
       <html lang="en">
@@ -685,7 +714,12 @@
                 <div class="widget widget-contact">
                   <ul class="contact-add">
                     <li>
-                      <div class="contact-info" style="cursor: pointer;"href="javascript:void(0)" onclick="sendMessage3();">
+                      <div
+                        class="contact-info"
+                        style="cursor: pointer"
+                        href="javascript:void(0)"
+                        onclick="sendMessagefoter()"
+                      >
                         <i
                           class="fa fa-phone"
                           style="
@@ -726,7 +760,10 @@
                       <!--contact-info end-->
                     </li>
                     <li>
-                      <div class="contact-info" onclick="window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s','_blank')">
+                      <div
+                        class="contact-info"
+                        onclick="window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.7803668202666!2d74.2375259!3d31.4506723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919018d53b1dbd9%3A0x91190f227583c319!2sShabbir%20Town%20B%20Type!5e0!3m2!1sen!2s!4v1647848877832!5m2!1sen!2s','_blank')"
+                      >
                         <i
                           class="fas fa-map-marker-alt"
                           style="

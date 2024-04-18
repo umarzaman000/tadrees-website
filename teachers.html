@@ -27,7 +27,30 @@
     <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
   </head>
-  
+  <script>
+    function sendMessagefoter() {
+    if (window.innerWidth < 992) {
+       return;
+      }
+      var prefilledText = "Hi I Want To Enroll In Tadrees.";
+      var phoneNumber = "923314488908"; 
+      var whatsappLink = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(prefilledText);
+      window.open(whatsappLink, "_blank");
+    }
+  </script>
+  <script>
+    function sendMessagenavbar() {
+      var prefilledText =
+        "Hi I Want To Enroll In Tadrees. ";
+      var phoneNumber = "923314488908";
+      var whatsappLink =
+        "https://wa.me/" +
+        phoneNumber +
+        "?text=" +
+        encodeURIComponent(prefilledText);
+      window.open(whatsappLink, "_blank");
+    }
+  </script>
 
   <body>
     <div class="wrapper">
@@ -44,7 +67,7 @@
                 <div 
                       style="cursor: pointer;"
                       href="javascript:void(0);"
-                      onclick="sendMessage3();"
+                      onclick="sendMessagenavbar();"
                       class="contact-info">
                   <i
                   
@@ -392,7 +415,7 @@
                       <div 
                       style="cursor: pointer;"
                       href="javascript:void(0);"
-                      onclick="sendMessage3();"
+                      onclick="sendMessagefoter()"
                       class="contact-info">
                         <i
                           class="fa fa-phone"
