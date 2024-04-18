@@ -29,13 +29,14 @@
     padding-bottom: 50px;
   }
   .teachers-section {
-    padding: 45px 0 70px;
+    padding: 50px 0 50px;
   }
   .course-section .courses-list .course-card:nth-child(2) {
     left: -50px;
   }
   .course-section {
-    padding-bottom: 70px;
+    padding-bottom: 0px;
+    padding-top: 0px !important;
   }
   .blog-section .blog-posts .blog-post .blog-info > h3 {
     font-size: 18px;
@@ -199,7 +200,7 @@
     margin-bottom: -50px;
   }
   .about-us-section {
-    padding: 70px 0 100px;
+    padding: 50px 0 50px;
   }
   .menu-btn {
     display: block;
@@ -332,7 +333,7 @@
     display: none;
   }
   .about-us-section {
-    padding: 70px 0;
+    padding: 50px 0;
   }
   .mw-100 {
     display: none;
@@ -341,7 +342,7 @@
     max-width: 75%;
   }
   .teachers-section {
-    padding-top: 25px;
+    padding-top: 0px;
   }
   .teachers-section .section-title > h2 {
     font-size: 40px;
@@ -643,7 +644,7 @@
     margin-bottom: 20px;
   }
   .main-banner .banner-text p {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
   }
   .main-banner {
     padding: 50px 0;
