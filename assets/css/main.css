@@ -793,7 +793,7 @@ header .navigation-bar nav ul ul ul {
 }
 .classes-section .classes-col .class-thumb > img {
   border-radius: 10px 10px 0 0;
-  min-height: 180px;
+  min-height: 220px;
   object-fit: cover;
 }
 .classes-section .classes-col .class-thumb .crt-btn {
@@ -2943,8 +2943,9 @@ footer .bottom-footer .social-links {
 .class-sidebar {
   position: relative;
   top: -143px;
-  max-width: 330px;
+  max-width: 350px;
   margin-left: auto;
+  
 }
 .class-sidebar .widget {
   margin-bottom: 30px;

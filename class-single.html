@@ -373,7 +373,7 @@
 
                         return `
                                             <div class="sidebar class-sidebar">
-                                                <div class="widget widget-information">
+                                                <div class="widget widget-information"style="margin-left: 10px; margin-right: 10px;">
                                                     <h3 class="widget-title">${course.name}</h3>
                                                     <ul>
                                                         <li>
@@ -411,11 +411,12 @@
                                                 </div>
                                                 <!--widget-information end-->
                                                 <div class="widget widget-classes-carousel">
-                                                    <h3 class="widget-title">Other Classes</h3>
+                                                  <h3 class="widget-title" style="margin-left: 10px;">Other Classes</h3>
+
                                                     <div id="coursesList7" class="classes-section classes-section-sidebar classes-widget-slider">
                                                     </div>
                                                 </div>
-                                                <div class="widget widget-contact-dp mdp-contact">
+                                                <div class="widget widget-contact-dp mdp-contact" style="margin-left: 10px; margin-right: 10px;">
                                                     <div class="mdp-our-contacts">
                                                         <h3>Our Contacts</h3>
                                                         <ul>
@@ -468,43 +469,28 @@
                       .map(function (course, index) {
                         if (index !== parseInt(courseId) - 1 || !courseId) {
                           return `
-                                                <div class="classes-col">
-                                                    <div class="class-thumb">
-                                                        <img src="${course.image}" alt="" class="w-100" />
-                                                        <a href="javascript:void(0);" title="" class="crt-btn">
-                                                          <i class="fab fa-whatsapp" style="font-size: 20px; position: relative; color: white; transform: rotate(0deg);"></i>
-                                                        </a>
-                                                    </div>
-                                                    <div class="class-info">
-                                                        <h3>${course.name}</h3>
-        
-        
-                                                        <span style="font-weight: bold; font-size: 15px"
-                                >Pre Requisite:</span>
-                              <span style="font-size: 15px; font-weight: 400"
-                                >${course.prerequsite}</span>
-                              <div class="d-flex flex-wrap align-items-center">
-                                <p
-                                  style="
-                                    color: #575757;
-                                    font-size: 14px;
-                                    font-weight: 400;
-                                  "
-                                >
-                                  <span
-                                    style="
-                                      font-size: 14px;
-                                      color: #575757;
-                                      font-weight: bold;
-                                    "
-                                    >Program Outline: </span
-                                  >${course.programoutline}
-                                </p>
-                                <br />
-                                <span class="price">${course.price}</span>
-                              </div>
-                              </div>
-                            </div>`;
+                          <div class="classes-col" style="margin-left: 10px; margin-right: 10px;">
+    <div class="class-thumb">
+        <img src="${course.image}" alt="" class="w-100" />
+        <a href="javascript:void(0);" title="" class="crt-btn">
+            <i class="fab fa-whatsapp" style="font-size: 20px; position: relative; color: white; transform: rotate(0deg);"></i>
+        </a>
+    </div>
+    <div class="class-info">
+        <h3>${course.name}</h3>
+        <span style="font-weight: bold; font-size: 15px;">Pre Requisite:</span>
+        <span style="font-size: 15px; font-weight: 400;">${course.prerequsite}</span>
+        <div class="d-flex flex-wrap align-items-center">
+            <p style="color: #575757; font-size: 14px; font-weight: 400;">
+                <span style="font-size: 14px; color: #575757; font-weight: bold;">Program Outline:</span>
+                ${course.programoutline}
+            </p>
+            <br />
+            <span class="price">${course.price}</span>
+        </div>
+    </div>
+</div>
+`;
                         }
                       })
                       .join("");
