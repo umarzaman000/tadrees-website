@@ -294,7 +294,7 @@ p {
 }
 header .header-content {
   border-bottom: 1px solid #eae5e5;
-  padding: 26px 0 25px;
+  padding: 26px 0 0px;
 }
 header .header-content .logo {
   -ms-flex: 0 0 33%;

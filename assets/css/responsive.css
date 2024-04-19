@@ -301,6 +301,10 @@
   .header .header-content{
    padding:  25px 0 0px !important;
   }
+  .header .header-content {
+    border-bottom: 1px solid #eae5e5;
+    padding: 26px 0 0px !important;
+}
   .sidebar {
     margin-top: 50px;
   }
@@ -328,6 +332,10 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  .header .header-content {
+    border-bottom: 1px solid #eae5e5;
+    padding: 26px 0 0px !important;
+}
   .banner-img {
     display: none;
   }
