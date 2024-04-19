@@ -23,12 +23,13 @@ var courses = [
     duration: "3 Months",
     price: "RS. 21,000/Month",
     programoutline:"42 Lectures, 10 Assignments, 1 Project, 3 Quizzes, Mid-term Evalution, Final Evalution.",
-    classhours:"10 AM - 12 AM",
+    classhours:"10-30 AM - 12 AM",
     studentage:"16 Years",
     classsize:"15 Students",
     lectures:"42 Lectures",
     project:"1 Project",
-    quizzes:"3 Quizzes"
+    quizzes:"3 Quizzes",
+    Assignments:"10 Assignments"
    },
   {
     learnings: [
@@ -54,15 +55,13 @@ var courses = [
     prerequsite: "intro to web development.",
     price: "RS. 21,000/Month",
     programoutline:"84 Lectures, 10 Assignments, 2 Project, 6 Quizzes, Mid-term Evalution, Final Evalution.",
-    classhours:"10 AM - 12 AM",
+    classhours:"10-30 AM - 12 AM",
     studentage:"16 Years",
     classsize:"15 Students",
     lectures:"84 Lectures",
     project:"2 Projects",
-    quizzes:"6 Quizzes"
-  
-  
-  
+    quizzes:"6 Quizzes",
+    Assignments:"10 Assignments",
   },
   {
     learnings: [
@@ -88,12 +87,13 @@ var courses = [
     prerequsite: "intro to web development.",
     price: "RS. 21,000/Month",
     programoutline:"84 Lectures, 10 Assignments, 2 Project, 6 Quizzes, Mid-term Evalution, Final Evalution.",
-    classhours:"10 AM - 12 AM",
+    classhours:"10-30 AM - 12 AM",
     studentage:"16 Years",
     classsize:"15 Students",
     lectures:"84 Lectures",
     project:"2 Projects",
-    quizzes:"6 Quizzes"
+    quizzes:"6 Quizzes",
+    Assignments:"10 Assignments",
   
   },
   {
@@ -120,11 +120,12 @@ var courses = [
     prerequsite: "Admission Interview.",
     price: "RS. 21,000/Month",
     programoutline:"42 Lectures, 10 Assignments, 1 Project, 3 Quizzes, Mid-term Evalution, Final Evalution.",
-    classhours:"10 AM - 12 AM",
+    classhours:"10-30 AM - 12 AM",
     studentage:"16 Years",
     classsize:"15 Students",
     lectures:"42 Lectures",
     project:"1 Project",
-    quizzes:"3 Quizzes"
+    quizzes:"3 Quizzes",
+    Assignments:"10 Assignments"
   }
 ];
