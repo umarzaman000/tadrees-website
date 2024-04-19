@@ -2940,6 +2940,13 @@ footer .bottom-footer .social-links {
 .ordrd li:last-child {
   margin-bottom: 0;
 }
+    /* For screens with width 768px or less */
+@media (max-width: 768px) {
+        .map {
+            border-radius: 10px;
+        }
+    }
+
 .class-sidebar {
   position: relative;
   top: -143px;
