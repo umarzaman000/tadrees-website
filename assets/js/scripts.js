@@ -183,7 +183,7 @@
             autoplay: true,
             dots: false,
             arrows:true,
-            autoplaySpeed: 2000
+            autoplaySpeed: 2000,
 
         });
 

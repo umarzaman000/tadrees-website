@@ -699,6 +699,8 @@
   .classes-carousel .slick-prev {
     top: -40px;
   }
+  .course-card .locat {
+    margin-left: 5px;}
   .classes-carousel .slick-prev {
     right: auto;
     left: 15px;

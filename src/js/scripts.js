@@ -80,7 +80,7 @@
             autoplay: true,
             dots: false,
             arrows:true,
-            autoplaySpeed: 2000
+            autoplaySpeed: 2000,
 
         });
 
@@ -93,7 +93,7 @@
             autoplay: true,
             dots: true,
             arrows:true,
-            autoplaySpeed: 2000
+            autoplaySpeed: 2000,
 
         });
 
