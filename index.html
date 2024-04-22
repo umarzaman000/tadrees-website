@@ -641,15 +641,18 @@
 
                       return `
                           <div data-index="${index}" style="cursor:pointer;" class="course-card">
-                              <div class="d-flex flex-wrap align-items-center">
-                                  <ul class="course-meta">
-                                      <li style="font-weight: bold">
-                                          <i class="fa fa-graduation-cap" style="font-size: 15px; position: relative; color: #1468ce; padding-right: 5px;"></i>Course Studied.
-                                      </li>
-                                  </ul>
-                                  <span>
-                                      <img style="width: 100px" src="/assets//img/logo.png" alt="">
-                                  </span>
+                              <div class="d-flex flex-wrap ">
+                                <ul class="course-meta" style="display: flex; justify-content: space-between; width: 100%; align-items:center">
+    <li style="font-weight: bold;">
+        <i class="fa fa-graduation-cap" style="font-size: 15px; position: relative; color: #1468ce; padding-right: 5px;"></i>Course Studied
+    </li>
+    <li>
+        <img style="width: 100px;" src="/assets/img/logo.png" alt="">
+    </li>
+</ul>
+
+
+                                  
                               </div>
                               <div style="min-height: 60px">
                                   ${coursesHtml}
